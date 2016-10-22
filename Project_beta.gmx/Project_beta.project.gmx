@@ -29,7 +29,6 @@
     <script>scripts\scr_lightAttack.gml</script>
     <script>scripts\scr_player_normal.gml</script>
     <script>scripts\scr_loseHealth.gml</script>
-    <script>scripts\test.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
