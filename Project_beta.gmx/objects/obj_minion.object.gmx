@@ -54,8 +54,7 @@ vsp = 0; //vertical speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pause == 1) exit;
-
+            <string>effect_create_above(ef_snow, 0, 0, 1, c_white);
 effect_create_below(ef_smokeup, x, y, choose(0, 1, 2), c_blue);
 
 
