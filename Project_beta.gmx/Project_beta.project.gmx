@@ -23,10 +23,19 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_collideAndMove.gml</script>
+    <script>scripts\scr_getInputs.gml</script>
+    <script>scripts\scr_lightAttack.gml</script>
+    <script>scripts\scr_player_normal.gml</script>
+    <script>scripts\scr_loseHealth.gml</script>
+    <script>scripts\test.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
     <object>objects\obj_inv</object>
+    <object>objects\object3</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
