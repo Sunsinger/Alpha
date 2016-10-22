@@ -56,9 +56,7 @@ vsp = 0; //vertical speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pause == 1) exit;
-
-hsp = dir * movespeed; //movespeed left or right
+            <string>hsp = dir * movespeed; //movespeed left or right
 
 if(fly_direction == 1){
     if(vsp &lt; 6)
