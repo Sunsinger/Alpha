@@ -160,6 +160,34 @@ for (i = 0; i &lt; maxHealth; i += 1)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>714</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_life_images</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_health</sprite>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
