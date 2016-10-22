@@ -11,6 +11,9 @@
     <sprite>sprites\spr_player_run</sprite>
     <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_idle</sprite>
+    <sprite>sprites\spr_border</sprite>
+    <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_potion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -19,6 +22,7 @@
   <objects name="objects">
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_inv</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
