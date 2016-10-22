@@ -96,7 +96,9 @@ movespeed  = 7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//get player's input
+            <string>if(global.pause == 1) exit;
+
+//get player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_space);
