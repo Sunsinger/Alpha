@@ -34,6 +34,8 @@ jumpspeed = 8;
 movespeed  = 7; 
 
 
+state = states.player_normal;
+
 </string>
           </argument>
         </arguments>
@@ -96,7 +98,14 @@ movespeed  = 7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//get player's input
+            <string>switch(state){
+case states.player_normal: scr_player_normal(); break;
+
+case states.light_attack: scr_lightAttack(); break;
+}
+
+/*
+//get player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_space);
@@ -149,6 +158,9 @@ if (place_meeting(x,y+1, obj_wall)){
 else{
     if (vsp &lt; 0) sprite_index = spr_player_jump; else sprite_index = spr_player_fall;
 }
+
+*/
+
 
 
 
