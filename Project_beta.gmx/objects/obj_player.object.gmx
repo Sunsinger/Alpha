@@ -29,6 +29,7 @@
 image_speed = 0.2;
 grav = 0.2;
 hsp = 0; //horizontal speed
+hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertifcal speed
 jumpspeed = 8;
 movespeed  = 7; 
@@ -36,6 +37,12 @@ movespeed  = 7;
 
 state = states.player_normal;
 
+/*
+Dont have other keys in here because no other object needed to check
+if they existed at any point, whereas key_down is checked by obj_platform
+Thus, need to ensure it is initialized. 
+*/
+key_down = 0;  
 </string>
           </argument>
         </arguments>
@@ -100,7 +107,6 @@ state = states.player_normal;
             <kind>1</kind>
             <string>switch(state){
 case states.player_normal: scr_player_normal(); break;
-
 case states.light_attack: scr_lightAttack(); break;
 }
 
