@@ -36,5 +36,9 @@ if (place_meeting(x,y+1, obj_wall)){
     }
 }
 else{
-    if (vsp < 0) sprite_index = spr_player_jump; else sprite_index = spr_player_fall;
+    if (vsp < 0) {
+        if (doublejump == 0)sprite_index = spr_player_double_jump;
+        else sprite_index = spr_player_jump; 
+        }
+    else sprite_index = spr_player_fall;
 }
