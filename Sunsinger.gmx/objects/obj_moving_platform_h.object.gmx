@@ -29,7 +29,7 @@
 
 //Initialize Variables
 dir = -1;
-movespeed = 3;
+movespeed = 5;
 hsp = 0;
 
 </string>
