@@ -72,11 +72,10 @@
     <object>objects\obj_hb_player_la</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room2_building1</room>
     <room>rooms\room1_cave</room>
-    <room>rooms\room2_outside1</room>
-    <room>rooms\room3_building1</room>
-    <room>rooms\room4_outside1</room>
+    <room>rooms\room0</room>
+    <room>rooms\room3_outside1</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>
