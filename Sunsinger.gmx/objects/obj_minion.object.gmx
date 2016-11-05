@@ -26,11 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>//Initial variables for enemy object
+state = e_states.idle;
 image_speed = 0.2;
-dir = -1; //horizontal direction, -1 is left, 1 is right
-movespeed = 3;
 grav = 0.2;
 hsp = 0; //horizontal speed
+move = 0;
+movespeed = 3;
+dir = -1;
+hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertical speed
 </string>
           </argument>
@@ -54,9 +57,49 @@ vsp = 0; //vertical speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>effect_create_above(ef_snow, 0, 0, 1, c_white);
-effect_create_below(ef_smokeup, x, y, choose(0, 1, 2), c_blue);
+            <string>switch(state){
+    case e_states.idle:
+    {
+        move = 0;
+        hsp = 0;
+        vsp = vsp+grav;
+        if(distance_to_object(obj_player) &lt; 600) 
+            state = e_states.chase;
+        break;
+    }
+    
+    case e_states.chase:
+    {
+        dir = sign(obj_player.x - x);   //Make enemy face player.
+        move = dir * -1;
+        hsp = dir * movespeed; //Movespeed of enemy
+        vsp = vsp+grav;
+        if(distance_to_object(obj_player) &gt; 700)
+            state = e_states.idle;
+        break;
+    }
+}
 
+scr_collideAndMove();
+
+//Animate
+if (move != 0) image_xscale = move;
+if (place_meeting(x,y+1, obj_wall)){
+    if (move != 0){
+     sprite_index = spr_minion_run;
+    }
+    else{
+     sprite_index = spr_minion_idle;
+    }
+}
+
+
+/*
+
+
+
+//effect_create_above(ef_snow, 0, 0, 1, c_white);
+//effect_create_below(ef_smokeup, x, y, choose(0, 1, 2), c_blue);
 
 hsp = dir * movespeed; //movespeed left or right
 vsp += grav;
@@ -94,23 +137,12 @@ if (place_meeting(x,y,obj_player))
 with(obj_player) vsp += 1;
 instance_create(0, 0, effect_shake);
 }
-
-//Animate
-
-if (move != 0) image_xscale = move;
-if (place_meeting(x,y+1, obj_wall)){
-    if (move != 0){
-     sprite_index = spr_minion_run;
-    }
-    else{
-     sprite_index = spr_minion_idle;
-    }
-}
-
 //else{
 //    if (vsp &lt; 0) sprite_index = spr_player_jump; else sprite_index = spr_player_fall;
 //}
 
+
+*/
 </string>
           </argument>
         </arguments>
