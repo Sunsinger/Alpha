@@ -7,48 +7,45 @@ if(key_lightAttack)
 //reaction to movements
 move = key_left + key_right;
 //hsp = move * movespeed;
-if(vsp < 20) vsp += grav;
-
-
+if(vsp < 20) 
+    vsp += grav;
 
 //acceleration code
-
 if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, obj_wall))){
-hsp -=(frict * sign(hsp))
-
-
-//error checking to ensure player stops
-if(hsp >= -.5 && hsp <= .5) hsp = 0;
+    hsp -=(frict * sign(hsp))
+    //error checking to ensure player stops
+    if(hsp >= -.5 && hsp <= .5) 
+        hsp = 0;
 }
 
 //full movement when on ground
 if((place_meeting(x,y+1, obj_wall))){
-doublejump = 1; //restore double jump when touching ground
+    doublejump = 1; //restore double jump when touching ground
 
-if(keyboard_check(vk_left)){
-if(hsp > -MAX_SPEED) hsp -=acc;
-facing = -1;
-}
+    if(keyboard_check(vk_left)){
+        if(hsp > -MAX_SPEED) hsp -=acc;
+        facing = -1;
+    }
 
-if(keyboard_check(vk_right)){
-if(hsp < MAX_SPEED) hsp +=acc;
-facing = 1;
+    if(keyboard_check(vk_right)){
+        if(hsp < MAX_SPEED) 
+            hsp +=acc;
+        facing = 1;
+    }
 }
-}
-
 else{ //less conttrol while in the air
-if(keyboard_check(vk_left)){
-if(hsp > -MAX_SPEED) hsp -=acc/2;
-facing = -1;
-}
+    if(keyboard_check(vk_left)){
+        if(hsp > -MAX_SPEED) 
+            hsp -=acc/2;    
+        facing = -1;
+    }
 
-if(keyboard_check(vk_right)){
-if(hsp < MAX_SPEED) hsp +=acc/2;
-facing = 1;
+    if(keyboard_check(vk_right)){
+        if(hsp < MAX_SPEED) 
+            hsp +=acc/2;
+        facing = 1;
+    }
 }
-
-}
-
 
 /*
 Obsolete due to platforms: If you jump up throug a platform to be exactly
@@ -74,6 +71,24 @@ else if (!place_meeting(x,y+1,obj_wall) && doublejump){
     doublejump=0;
     effect_create_above(ef_ring, x, y, 2, c_white)
     }
+}
+
+//Animate
+if (move != 0) image_xscale = move;
+if (place_meeting(x,y+1, obj_wall)){
+    if (move != 0){
+     sprite_index = spr_player_run;
+    }
+    else{
+     sprite_index = spr_player_idle;
+    }
+}
+else{
+    if (vsp < 0) {
+        if (doublejump == 0)sprite_index = spr_player_double_jump;
+        else sprite_index = spr_player_jump; 
+        }
+    else sprite_index = spr_player_fall;
 }
 
 
