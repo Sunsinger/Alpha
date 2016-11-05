@@ -23,22 +23,3 @@ if(place_meeting(x,y+vsp,obj_wall)){
     vsp = 0;
 }
 y += vsp;
-
-
-//Animate
-if (move != 0) image_xscale = move;
-if (place_meeting(x,y+1, obj_wall)){
-    if (move != 0){
-     sprite_index = spr_player_run;
-    }
-    else{
-     sprite_index = spr_player_idle;
-    }
-}
-else{
-    if (vsp < 0) {
-        if (doublejump == 0)sprite_index = spr_player_double_jump;
-        else sprite_index = spr_player_jump; 
-        }
-    else sprite_index = spr_player_fall;
-}
