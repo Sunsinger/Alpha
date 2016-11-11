@@ -149,7 +149,6 @@
     <instance objName="obj_wall" x="1856" y="1024" name="inst_DF03D587" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1248" y="992" name="inst_FF14EEC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="736" y="512" name="inst_8D16F096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pause" x="96" y="64" name="inst_B285911C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bird" x="960" y="928" name="inst_A4D3ACDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bird" x="768" y="928" name="inst_F8DFF047" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="544" y="320" name="inst_86FF4ED5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

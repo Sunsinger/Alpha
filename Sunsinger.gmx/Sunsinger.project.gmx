@@ -54,6 +54,16 @@
     <sprite>sprites\spr_hb_minion_atk</sprite>
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_slime_charge</sprite>
+    <sprite>sprites\spr_healthblock</sprite>
+    <sprite>sprites\spr_healthblockPlayer</sprite>
+    <sprite>sprites\spr_info</sprite>
+    <sprite>sprites\spr_infoscren</sprite>
+    <sprite>sprites\spr_inventory</sprite>
+    <sprite>sprites\spr_pause</sprite>
+    <sprite>sprites\spr_quit</sprite>
+    <sprite>sprites\spr_returnMenu</sprite>
+    <sprite>sprites\spr_start</sprite>
+    <sprite>sprites\spr_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -67,6 +77,8 @@
     <script>scripts\scr_loseHealth.gml</script>
     <script>scripts\scr_player_normal.gml</script>
     <script>scripts\scr_takeDamage.gml</script>
+    <script>scripts\scr_inventory.gml</script>
+    <script>scripts\scr_screen_capture.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\effect_shake</object>
@@ -84,12 +96,21 @@
     <object>objects\obj_slime</object>
     <object>objects\obj_slime_projectile</object>
     <object>objects\obj_hb_minion_atk</object>
+    <object>objects\obj_controller_pause</object>
+    <object>objects\obj_info</object>
+    <object>objects\obj_infoScreen</object>
+    <object>objects\obj_quit</object>
+    <object>objects\obj_returnMenu</object>
+    <object>objects\obj_start</object>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\TitleScreen</room>
     <room>rooms\room2_building1</room>
     <room>rooms\room1_cave</room>
     <room>rooms\room0</room>
     <room>rooms\room3_outside1</room>
+    <room>rooms\InfoScreen</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>

@@ -2,9 +2,9 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
-  <depth>-1000</depth>
-  <persistent>-1</persistent>
+  <visible>0</visible>
+  <depth>-2000000</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,24 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-globalvar showInv;
-showInv = true;
+            <string>/// Declare variables for pause event
 
-globalvar maxItems;
-maxItems = 2;
-for (i=0; i&lt;maxItems; i+=1)
-{
-    global.inventory[i] = -1
-}
+// This controller will deactivate all instances in the room
+// bisides itself. This means that all instances dissapear when
+// being deactivated. The screenshot will be taken before that happens.
+// Make sure this controller is in front of everything, even tiles.
 
-
+game_paused = false;      // If game is paused or not
+deactivated = false;      // Whether or not the instances in the room have been deactivated
+pause_col=make_color_rgb(40,40,40); // Color of the pause screen (darken the screen)
+pause_bg = -1;            // Background to draw on the pause menu
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -59,98 +58,68 @@ for (i=0; i&lt;maxItems; i+=1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(showInv){
-    var x1,x2,y1,y2;
-    x1 = view_xview[0];
-    y1 = view_yview[0];
-    y2 = 0;
-    draw_set_alpha(1);
-    for (i=0; i&lt;maxItems; i+=1)
+            <string>/// Check for pause key pressed / unpause
+
+if keyboard_check(vk_escape)
+  {
+  // This makes sure we press the pause key once
+  io_clear();
+  // Pause or unpause depending on the visibility of the controller
+  if (visible = false) {visible = true;game_paused = true;} else {game_paused = false;}
+  }
+
+if (visible = false) {exit;}
+
+// Reactivate all instances and unpause
+if (game_paused = false &amp;&amp; deactivated = true)
+  {
+  // Free memory of background data
+  if (background_exists(pause_bg) = true) {background_delete(pause_bg)}
+  // Reactivate all objects
+  instance_activate_all();
+  deactivated = false;
+  // Hide pause screen
+  visible = false;
+  }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Make sure game is paused
+if (game_paused = true &amp;&amp; visible = true)
+  {
+  // Make sure instances are not yet deactivated to capture screen
+  if (deactivated = false)
     {
-        draw_sprite(spr_border,0,x1+425+(i * 70),y2+32)
-    };
-    for (i=0; i&lt;maxItems; i+=1)
-    {
-        if(global.inventory[i] != -1){
-            draw_sprite(spr_inventory,global.inventory[i],x1+425+(i * 70),y2+32)
-        }
-    };
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>714</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_life_images</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_healthblock</sprite>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="49">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_inventory(global.inventory[0],0);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="50">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_inventory(global.inventory[1],1);
+    // Capture the screen
+    pause_bg = scr_screen_capture();
+    // Deactivate all instances besides this controler
+    instance_deactivate_all(true);
+    deactivated = true;
+    }
+  // Draw our pause screen
+  draw_background_ext(pause_bg,0,0,background_xscale[0],background_yscale[0],0,pause_col,1); 
+  draw_set_font(fnt_pause);
+  draw_text_colour((room_width/2)-60,(room_height/2)-30,"PAUSE",c_white,c_white,c_white,c_white,1);
+  }
 </string>
           </argument>
         </arguments>

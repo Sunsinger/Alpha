@@ -35,8 +35,7 @@ jumpspeed = 6;
 movespeed  = 7; 
 recently_hit = false;
 counter = 0;
-health = 100;
-lives = 5;
+lives = maxLives;
 
 
 state = states.player_normal;
@@ -209,6 +208,53 @@ else{
             <string>if(lives == 0){
 game_restart();
 }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_slime_projectile">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_takeDamage();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_slime">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_takeDamage();
 </string>
           </argument>
         </arguments>
@@ -231,12 +277,38 @@ game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(lives &lt; maxLives){
-    lives += 1;
-    }
+            <string>for(i =0; i &lt; maxItems; i++){
+if(global.inventory[i] == -1){
+global.inventory[i] = 0;
+break;
+}
+}
 with(obj_life){
     instance_destroy();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_minion">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_takeDamage();
 </string>
           </argument>
         </arguments>
@@ -259,7 +331,7 @@ with(obj_life){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_takeDamage(20);
+            <string>scr_takeDamage();
 </string>
           </argument>
         </arguments>
@@ -369,52 +441,17 @@ action_move_to(288,832);
     else
     {
         draw_sprite_ext(spr_player_idle, 0, x, y, 1, 1, 0, c_white, 0.25);
+        for(i = 0; i &lt; lives; i++)
+        {
+            draw_sprite(spr_healthblockPlayer, 0, obj_player.x+50*i, obj_player.y-50)
+        }
+    
         
     }
 } else{
 draw_self();
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>723</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_health</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>obj_player.x-50</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_player.y-60</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_player.x+50</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>obj_player.y-67</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
