@@ -81,6 +81,9 @@
     <script>scripts\scr_inventory.gml</script>
     <script>scripts\scr_screen_capture.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_pause</font>
+  </fonts>
   <objects name="objects">
     <object>objects\effect_shake</object>
     <object>objects\obj_bird</object>
