@@ -35,6 +35,12 @@ movespeed = 2;
 dir = -1;
 hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertical speed
+
+shootTimer = 0;
+chargeTimer = 0;
+moveTimer = 0;
+
+counter = 0;
 </string>
           </argument>
         </arguments>
@@ -57,47 +63,96 @@ vsp = 0; //vertical speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(state){
+            <string>shootTimer++;
+chargeTimer++;
+
+switch(state){
     case slime_states.idle:
     {
+        image_speed = 0.1; 
         move = 0;
         hsp = 0;
         vsp = vsp+grav;
         sprite_index = spr_slime_idlemove;
+        
         if(distance_to_object(obj_player) &lt; 500) 
             state = slime_states.chase;
+            
         break;
     }
     
     case slime_states.chase:
     {
+        sprite_index = spr_slime_idlemove;
+    
+        image_speed = 0.1; 
+    
         dir = sign(obj_player.x - x);   //Make enemy face player.
         move = dir * -1;
         image_xscale = move;
         hsp = dir * movespeed; //Movespeed of enemy
         vsp = vsp+grav;
-        if(distance_to_object(obj_player) &lt; 300)
+        
+        if((distance_to_object(obj_player) &lt; 400) &amp;&amp; (chargeTimer &gt; 120)){
+            state = slime_states.charge;
+            chargeTimer = 0; //reset charge cooldown
+            }
+        else if((distance_to_object(obj_player) &lt; 400) &amp;&amp; (shootTimer &gt; 120)){
             state = slime_states.attack;
-        if(distance_to_object(obj_player) &gt; 800)
+            shootTimer = 0; //reset shoot cooldown
+            }
+        else if(distance_to_object(obj_player) &gt; 800)
             state = slime_states.idle;
+        break;
+    }
+    
+        case slime_states.charge:
+    {
+        sprite_index = spr_slime_charge;
+        
+        effect_create_below(ef_smoke, x, y+65, 1, c_gray);
+        
+        //dir = sign(obj_player.x - x);   //Make enemy face player.
+        //move = dir * -1;
+        image_xscale = move;
+        
+        if (counter == 30) //charge at player for a short time
+        {
+        state = slime_states.idle; 
+        counter = 0;
+        }
+        else {
+        hsp = dir * movespeed * 7; //charge player
+        counter++; 
+        } 
+        
+        vsp = vsp+grav;
         break;
     }
     
     case slime_states.attack:
     {
         hsp = 0;
+        
+        image_speed = 0.3; //speed up animation for a quick attack
+        
         sprite_index = spr_slime_atk;
         
         //Check animation frames to fire projectile
-        
-       if(image_index &gt;= 8 &amp;&amp; image_index &lt;=9 ){
+           
+       if(image_index &gt; 8 &amp;&amp; image_index &lt;=8.30){
+       
+            audio_play_sound(snd_slime_shoot,0,0); //play shooting sound
+            
             //effect_create_below(ef_smokeup, x, y, choose(0, 1, 2), c_blue);
             with(instance_create(x, y, obj_slime_projectile)){
-                speed = 5 * obj_slime.dir;
+                speed = 10 * obj_slime.dir;
                 }
              
               
       }
+      
+        //image_speed = 0.1; //reset animation speed
         //state = slime_states.chase;
       
     }
@@ -127,7 +182,8 @@ scr_collideAndMove();
           <argument>
             <kind>1</kind>
             <string>if(sprite_index == spr_slime_atk)
-    state = slime_states.idle;
+    state = slime_states.chase;
+    
 </string>
           </argument>
         </arguments>
