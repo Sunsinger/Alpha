@@ -47,31 +47,43 @@ else{ //less conttrol while in the air
     }
 }
 
-/*
-Obsolete due to platforms: If you jump up throug a platform to be exactly
-one pixel above it, this code will run, and will set the verticle speed to be zero
-or jumpspeed, causing you to stick to the platform as you jump up through it instead of 
-continuing with your momentum, looking unnatural.
-if (place_meeting(x,y+1,obj_wall)){
-    vsp = key_jump * -jumpspeed
-}
-*/
 
 /*
 This if will only set verticle speed when the jump key is pressed, avoiding the problem above.
 */
-if (place_meeting(x,y+1,obj_wall)){
-    if(key_jump) vsp = -jumpspeed * 1.5
+if (place_meeting(x,y+1,obj_wall)){        
+    if(key_jump) {
+    vsp = -jumpspeed * 1.5
+    audio_play_sound(snd_jump,0,0); //play jump sound
+    effect_create_below(ef_smoke, x, y+85, 1, c_gray);
+    }
 }
 
 //double jump script
 else if (!place_meeting(x,y+1,obj_wall) && doublejump && !((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) )){
     if(key_jump){
      vsp = -jumpspeed * 1.5
-    doublejump=0;
-    effect_create_above(ef_ring, x, y, 2, c_white)
+     doublejump=0;
+    
     }
 }
+
+
+ //wall jump script
+if((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) ) {
+    if(key_jump){
+     vsp = -jumpspeed * 1.5; //1.5
+     //vsp = -jumpspeed * 1;
+     hsp = MAX_SPEED * -facing;
+     facing = sign(hsp);
+     
+     image_xscale = facing;
+     
+     audio_play_sound(snd_jump,0,0); //play jump sound
+     effect_create_below(ef_smoke, x, y+85, 1.5, c_gray);
+    }
+}
+
 
 //Animate
 if (move != 0) image_xscale = move;
@@ -91,17 +103,6 @@ else{
     else sprite_index = spr_player_fall;
 }
 
- //wall jump script
-if((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) ) {
-    if(key_jump){
-     vsp = -jumpspeed * 1.5; //1.5
-     //vsp = -jumpspeed * 1;
-     hsp = MAX_SPEED * -facing;
-     facing = sign(hsp);
-     
-     image_xscale = facing;
-    }
-}
 
 
 
