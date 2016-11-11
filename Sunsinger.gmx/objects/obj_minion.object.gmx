@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Initial variables for enemy object
-state = e_states.idle;
+state = minion_states.idle;
 image_speed = 0.2;
 grav = 0.2;
 hsp = 0; //horizontal speed
@@ -58,40 +58,62 @@ vsp = 0; //vertical speed
           <argument>
             <kind>1</kind>
             <string>switch(state){
-    case e_states.idle:
+    case minion_states.idle:
     {
         move = 0;
         hsp = 0;
         vsp = vsp+grav;
+        sprite_index = spr_minion_idle;
         if(distance_to_object(obj_player) &lt; 600) 
-            state = e_states.chase;
+            state = minion_states.chase;
         break;
     }
     
-    case e_states.chase:
+    case minion_states.chase:
     {
         dir = sign(obj_player.x - x);   //Make enemy face player.
         move = dir * -1;
         hsp = dir * movespeed; //Movespeed of enemy
         vsp = vsp+grav;
+        
+        //Animate
+        if (move != 0) 
+            image_xscale = move;
+        if (place_meeting(x,y+1, obj_wall)){
+            if (move != 0)
+                sprite_index = spr_minion_run;
+        }
+        
+        if(distance_to_object(obj_player) &lt; 33)
+            state = minion_states.attack;
         if(distance_to_object(obj_player) &gt; 700)
-            state = e_states.idle;
+            state = minion_states.idle;
         break;
     }
-}
+    
+    case minion_states.attack:
+    {
+        hsp = 0;
+        //Start animation
+        sprite_index = spr_minion_atk;
+        
+        //Check damage frames
+        if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 5){
+            with(instance_create(x, y, obj_hb_minion_atk)){
+                //Flip based on direction
+                image_xscale = other.image_xscale;
+                
+                //Collision between enemy and player
+                //with(instance_place(x, y, obj_player)){
+                    //instance_destroy(); //Remove health here
+                }    
+            }
+        }
+    }
+    
+//}
 
 scr_collideAndMove();
-
-//Animate
-if (move != 0) image_xscale = move;
-if (place_meeting(x,y+1, obj_wall)){
-    if (move != 0){
-     sprite_index = spr_minion_run;
-    }
-    else{
-     sprite_index = spr_minion_idle;
-    }
-}
 
 
 /*
@@ -143,6 +165,30 @@ instance_create(0, 0, effect_shake);
 
 
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(sprite_index == spr_minion_atk)
+    state = minion_states.idle;
 </string>
           </argument>
         </arguments>

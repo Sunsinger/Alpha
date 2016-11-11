@@ -1,3 +1,4 @@
+hsp = 0;
 //Start animation
 sprite_index = spr_player_la;
 
@@ -12,6 +13,15 @@ if(image_index >= 1 && image_index <= 3){
         with(instance_place(x, y, obj_bird)){
             instance_destroy();
         }
+        //Collision between hitbox and enemy
+        with(instance_place(x, y, obj_minion)){
+            instance_destroy();
+        }
+        //Collision between hitbox and enemy
+        with(instance_place(x, y, obj_slime)){
+            instance_destroy();
+        }
     }
 
 }
+scr_collideAndMove();

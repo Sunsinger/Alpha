@@ -1,7 +1,7 @@
 scr_getInputs();
 
 //Are you light attacking?
-if(key_lightAttack)
+if(key_lightAttack && (place_meeting(x,y+1, obj_wall)))
     state = states.light_attack;
 
 //reaction to movements
@@ -65,7 +65,7 @@ if (place_meeting(x,y+1,obj_wall)){
 }
 
 //double jump script
-else if (!place_meeting(x,y+1,obj_wall) && doublejump){
+else if (!place_meeting(x,y+1,obj_wall) && doublejump && !((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) )){
     if(key_jump){
      vsp = -jumpspeed * 1.5
     doublejump=0;
@@ -90,6 +90,19 @@ else{
         }
     else sprite_index = spr_player_fall;
 }
+
+ //wall jump script
+if((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) ) {
+    if(key_jump){
+     vsp = -jumpspeed * 1.5; //1.5
+     //vsp = -jumpspeed * 1;
+     hsp = MAX_SPEED * -facing;
+     facing = sign(hsp);
+     
+     image_xscale = facing;
+    }
+}
+
 
 
 scr_collideAndMove();

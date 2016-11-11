@@ -33,7 +33,6 @@
     <sprite>sprites\spr_minion_idle</sprite>
     <sprite>sprites\spr_minion_run</sprite>
     <sprite>sprites\spr_moving_platform_h</sprite>
-    <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_player_double_jump</sprite>
     <sprite>sprites\spr_player_fall</sprite>
     <sprite>sprites\spr_player_idle</sprite>
@@ -44,6 +43,12 @@
     <sprite>sprites\spir_minion_idle</sprite>
     <sprite>sprites\spr_hb_player_la</sprite>
     <sprite>sprites\spr_player_la</sprite>
+    <sprite>sprites\spr_slime_idlemove</sprite>
+    <sprite>sprites\spr_slime_atk</sprite>
+    <sprite>sprites\spr_slime_projectile</sprite>
+    <sprite>sprites\spr_minion_atk</sprite>
+    <sprite>sprites\spr_hb_minion_atk</sprite>
+    <sprite>sprites\spr_platform</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -70,6 +75,9 @@
     <object>objects\obj_life</object>
     <object>objects\obj_livesBar</object>
     <object>objects\obj_hb_player_la</object>
+    <object>objects\obj_slime</object>
+    <object>objects\obj_slime_projectile</object>
+    <object>objects\obj_hb_minion_atk</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2_building1</room>
