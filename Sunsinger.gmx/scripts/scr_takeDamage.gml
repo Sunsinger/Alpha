@@ -1,6 +1,7 @@
 if(!recently_hit){
  
 if(lives > 0){
+    audio_play_sound(snd_injured,11,0);
     lives -= 1;
     }
     recently_hit = true;
