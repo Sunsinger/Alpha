@@ -65,6 +65,9 @@
     <sprite>sprites\spr_returnMenu</sprite>
     <sprite>sprites\spr_start</sprite>
     <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_gameRestart</sprite>
+    <sprite>sprites\spr_gotoMain</sprite>
+    <sprite>sprites\spr_gameOver</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -109,8 +112,12 @@
     <object>objects\obj_start</object>
     <object>objects\obj_title</object>
     <object>objects\obj_title_music</object>
+    <object>objects\obj_restartGame</object>
+    <object>objects\obj_gameOver</object>
+    <object>objects\obj_mainMenu</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\game_over</room>
     <room>rooms\TitleScreen</room>
     <room>rooms\room2_building1</room>
     <room>rooms\room1_cave</room>

@@ -1,7 +1,7 @@
 
 if(!recently_hit){
  
-if(lives > 0){
+if(lives > 0 && !invincible){
     lives -= 1;
     }
     recently_hit = true;
