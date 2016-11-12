@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>65</bbox_left>
-  <bbox_right>161</bbox_right>
-  <bbox_top>10</bbox_top>
-  <bbox_bottom>84</bbox_bottom>
+  <bbox_left>93</bbox_left>
+  <bbox_right>278</bbox_right>
+  <bbox_top>20</bbox_top>
+  <bbox_bottom>100</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>162</width>
-  <height>148</height>
+  <width>279</width>
+  <height>182</height>
   <frames>
     <frame index="0">images\spr_hb_player_la_0.png</frame>
   </frames>
