@@ -30,6 +30,9 @@
     <sound>sound\snd_jump</sound>
     <sound>sound\snd_slime_shoot</sound>
     <sound>sound\snd_title_song</sound>
+    <sound>sound\snd_punch</sound>
+    <sound>sound\snd_injured</sound>
+    <sound>sound\snd_minionAttack</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bird_fly</sprite>
@@ -120,12 +123,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room2_building1</room>
+    <room>rooms\TitleScreen</room>
     <room>rooms\room1_cave</room>
     <room>rooms\room0</room>
     <room>rooms\room3_outside1</room>
     <room>rooms\InfoScreen</room>
     <room>rooms\game_over</room>
-    <room>rooms\TitleScreen</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>
