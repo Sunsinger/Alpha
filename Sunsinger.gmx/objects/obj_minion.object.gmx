@@ -35,6 +35,8 @@ movespeed = 3;
 dir = -1;
 hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertical speed
+
+attackCounter = 0;
 </string>
           </argument>
         </arguments>
@@ -57,14 +59,16 @@ vsp = 0; //vertical speed
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(state){
+            <string>attackCounter++;
+
+switch(state){
     case minion_states.idle:
     {
         move = 0;
         hsp = 0;
         vsp = vsp+grav;
         sprite_index = spr_minion_idle;
-        if(distance_to_object(obj_player) &lt; 600) 
+        if(distance_to_object(obj_player) &lt; 600 &amp;&amp; (attackCounter &gt;= 30))
             state = minion_states.chase;
         break;
     }
@@ -92,25 +96,40 @@ vsp = 0; //vertical speed
     }
     
     case minion_states.attack:
-    {
-        hsp = 0;
+    {        
+    
+            hsp = 0;
+        
+        if (attackCounter &gt;= 30){
+    
         //Start animation
         sprite_index = spr_minion_atk;
         
+        
         //Check damage frames
-        if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 5){
+        if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 3.2){
             with(instance_create(x, y, obj_hb_minion_atk)){
                 //Flip based on direction
                 image_xscale = other.image_xscale;
                 
                 //Collision between enemy and player
-                //with(instance_place(x, y, obj_player)){
-                    //instance_destroy(); //Remove health here
+                with(instance_place(x, y, obj_player)){
+                    scr_getInputs(0);
+                    obj_player.hsp = 8* (facing * -1);
+                    obj_player.vsp = -3;
+                    state = states.take_damage; //Go into damage state
+                    } 
+                    
+                           
                 }    
             }
         }
+        
+                
+        
+
     }
-    
+    }
 //}
 
 scr_collideAndMove();
@@ -187,8 +206,10 @@ instance_create(0, 0, effect_shake);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == spr_minion_atk)
+            <string>if(sprite_index == spr_minion_atk){
+    attackCounter = 0;
     state = minion_states.idle;
+    }
 </string>
           </argument>
         </arguments>

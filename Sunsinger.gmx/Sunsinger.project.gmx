@@ -68,6 +68,7 @@
     <sprite>sprites\spr_gameRestart</sprite>
     <sprite>sprites\spr_gotoMain</sprite>
     <sprite>sprites\spr_gameOver</sprite>
+    <sprite>sprites\spr_playerFlinch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -77,6 +78,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_collideAndMove.gml</script>
+    <script>scripts\scr_playerCollideAndMove.gml</script>
     <script>scripts\scr_getInputs.gml</script>
     <script>scripts\scr_lightAttack.gml</script>
     <script>scripts\scr_loseHealth.gml</script>
@@ -117,16 +119,16 @@
     <object>objects\obj_mainMenu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\game_over</room>
-    <room>rooms\TitleScreen</room>
     <room>rooms\room2_building1</room>
     <room>rooms\room1_cave</room>
     <room>rooms\room0</room>
     <room>rooms\room3_outside1</room>
     <room>rooms\InfoScreen</room>
+    <room>rooms\game_over</room>
+    <room>rooms\TitleScreen</room>
   </rooms>
   <constants number="1">
-    <constant name="maxLives">5</constant>
+    <constant name="maxLives">10</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

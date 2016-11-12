@@ -1,4 +1,4 @@
-scr_getInputs();
+scr_getInputs(1);
 
 //Are you light attacking?
 if(key_lightAttack && (place_meeting(x,y+1, obj_wall)))
@@ -11,12 +11,14 @@ if(vsp < 20)
     vsp += grav;
 
 //acceleration code
+/*
 if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, obj_wall))){
     hsp -=(frict * sign(hsp))
     //error checking to ensure player stops
     if(hsp >= -.5 && hsp <= .5) 
         hsp = 0;
 }
+*/
 
 //full movement when on ground
 if((place_meeting(x,y+1, obj_wall))){
@@ -106,4 +108,4 @@ else{
 
 
 
-scr_collideAndMove();
+scr_playerCollideAndMove();

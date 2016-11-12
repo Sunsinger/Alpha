@@ -13,7 +13,8 @@
   <code>enum states
 {
     player_normal,
-    light_attack
+    light_attack,
+    take_damage
     
 }
 
