@@ -108,6 +108,8 @@ switch(state){
         
         //Check damage frames
         if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 3.2){
+            audio_play_sound(snd_minionAttack,10,0)
+        
             with(instance_create(x, y, obj_hb_minion_atk)){
                 //Flip based on direction
                 image_xscale = other.image_xscale;
