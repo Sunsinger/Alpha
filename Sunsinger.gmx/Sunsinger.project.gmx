@@ -29,6 +29,7 @@
     <sound>sound\snd_cave</sound>
     <sound>sound\snd_jump</sound>
     <sound>sound\snd_slime_shoot</sound>
+    <sound>sound\snd_title_song</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bird_fly</sprite>
@@ -107,6 +108,7 @@
     <object>objects\obj_returnMenu</object>
     <object>objects\obj_start</object>
     <object>objects\obj_title</object>
+    <object>objects\obj_title_music</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
