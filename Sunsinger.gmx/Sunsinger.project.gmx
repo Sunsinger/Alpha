@@ -128,7 +128,7 @@
     <room>rooms\TitleScreen</room>
   </rooms>
   <constants number="1">
-    <constant name="maxLives">10</constant>
+    <constant name="maxLives">5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
