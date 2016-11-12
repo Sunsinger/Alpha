@@ -1,8 +1,10 @@
 scr_getInputs(1);
 
 //Are you light attacking?
-if(key_lightAttack && (place_meeting(x,y+1, obj_wall)))
+if(key_lightAttack && (place_meeting(x,y+1, obj_wall))){
     state = states.light_attack;
+    audio_play_sound(snd_punch,10,0);
+}
 
 //reaction to movements
 move = key_left + key_right;
