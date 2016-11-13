@@ -8,19 +8,6 @@ if(image_index >= 1 && image_index <= 3){
     with(instance_create(x, y, obj_hb_player_la)){
         //Flip based on direction
         image_xscale = other.image_xscale;
-        
-        //Collision between hitbox and enemy
-        with(instance_place(x, y, obj_bird)){
-            instance_destroy();
-        }
-        //Collision between hitbox and enemy
-        with(instance_place(x, y, obj_minion)){
-            instance_destroy();
-        }
-        //Collision between hitbox and enemy
-        with(instance_place(x, y, obj_slime)){
-            instance_destroy();
-        }
     }
 
 }
