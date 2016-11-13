@@ -86,6 +86,8 @@
     <sprite>sprites\spr_floor_out_big</sprite>
     <sprite>sprites\spr_flower</sprite>
     <sprite>sprites\spr_home</sprite>
+    <sprite>sprites\spr_lever_off</sprite>
+    <sprite>sprites\spr_lever_on</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -96,7 +98,11 @@
     <background>background\birds</background>
     <background>background\cave_bg</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_bird_patrol_2_1</path>
+    <path>paths\pth_bird_patrol_2_2</path>
+    <path>paths\pth_bird_patrol_2_3</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_collideAndMove.gml</script>
     <script>scripts\scr_playerCollideAndMove.gml</script>
@@ -155,6 +161,7 @@
     <object>objects\obj_out_big</object>
     <object>objects\obj_rock_new</object>
     <object>objects\obj_web_new</object>
+    <object>objects\obj_lever</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
