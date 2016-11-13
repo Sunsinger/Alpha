@@ -37,7 +37,7 @@ movespeed  = 7;
 recently_hit = false;
 counter = 0;
 lives = maxLives;
-
+canAerial = 1;
 
 state = states.player_normal;
 
@@ -103,6 +103,7 @@ state = states.player_normal;
             <string>switch(state){
 case states.player_normal: scr_player_normal(); break;
 case states.light_attack: scr_lightAttack(); break;
+case states.aerial_attack: scr_aerialAttack(); break;
 case states.take_damage: scr_takeDamage(); break;
 }
 
@@ -317,7 +318,12 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == spr_player_la)
+            <string>//Go back to state normal after light attack
+if(sprite_index == spr_player_la)
+    state = states.player_normal;
+
+//Go back to state normal after aerial attack
+if(sprite_index == spr_player_aa)
     state = states.player_normal;
 </string>
           </argument>

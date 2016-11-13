@@ -6,6 +6,16 @@ if(key_lightAttack && (place_meeting(x,y+1, obj_wall))){
     audio_play_sound(snd_punch,10,0);
 }
 
+//Aerial Attack Cooldown
+if(place_meeting(x, y+1, obj_wall))
+    canAerial = 1;
+
+//Are you aerial attacking?
+if(key_lightAttack && (!place_meeting(x, y+1, obj_wall)) && canAerial){
+    state = states.aerial_attack;
+    audio_play_sound(snd_punch, 10, 0); //Placeholder sound
+}
+
 //reaction to movements
 move = key_left + key_right;
 //hsp = move * movespeed;
