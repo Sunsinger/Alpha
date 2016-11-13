@@ -88,6 +88,8 @@
     <sprite>sprites\spr_home</sprite>
     <sprite>sprites\spr_lever_off</sprite>
     <sprite>sprites\spr_lever_on</sprite>
+    <sprite>sprites\spr_player_aa</sprite>
+    <sprite>sprites\spr_hb_player_aa</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -113,6 +115,7 @@
     <script>scripts\scr_takeDamage.gml</script>
     <script>scripts\scr_inventory.gml</script>
     <script>scripts\scr_screen_capture.gml</script>
+    <script>scripts\scr_aerialAttack.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_pause</font>
@@ -162,6 +165,7 @@
     <object>objects\obj_rock_new</object>
     <object>objects\obj_web_new</object>
     <object>objects\obj_lever</object>
+    <object>objects\obj_hb_player_aa</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
