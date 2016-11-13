@@ -35,8 +35,36 @@ movespeed = 3;
 dir = -1;
 hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertical speed
+frict = 1;
 
 attackCounter = 0;
+
+invincible = false;
+hp = 4;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>invincible = false;
+state = minion_states.chase;
 </string>
           </argument>
         </arguments>
@@ -93,6 +121,12 @@ switch(state){
         if(distance_to_object(obj_player) &gt; 700)
             state = minion_states.idle;
         break;
+    }
+    
+    case minion_states.damaged:
+    { 
+     scr_collideAndMove();
+     break;
     }
     
     case minion_states.attack:
@@ -186,6 +220,47 @@ instance_create(0, 0, effect_shake);
 
 
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hb_player_la">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> 
+ if(!invincible){
+ 
+ audio_play_sound(snd_minion_injured,11,0);
+ invincible = true;
+ alarm[11] = 40;
+ 
+ hp--
+
+if (hp &lt;= 0){
+instance_destroy();
+}
+else{
+ vsp = -5
+ hsp = 7 * -dir
+ }
+ 
+  state = minion_states.damaged;
+}
 </string>
           </argument>
         </arguments>
