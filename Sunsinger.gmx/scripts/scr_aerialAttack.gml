@@ -1,3 +1,5 @@
+attacking = true;
+
 //Can only aerial attack once per jump
 canAerial = 0;
 
@@ -5,7 +7,7 @@ canAerial = 0;
 sprite_index = spr_player_aa;
 
 //check if in animation damage frames
-if(image_index >= 1 && image_index <= 3){
+if(image_index >= 0 && image_index <= 4){
     //create hitbox
     with(instance_create(x, y, obj_hb_player_aa)){
         //Flip based on direction
@@ -25,4 +27,6 @@ if(image_index >= 1 && image_index <= 3){
         }
     }
 }
+
+attacking = false;
 scr_collideAndMove();
