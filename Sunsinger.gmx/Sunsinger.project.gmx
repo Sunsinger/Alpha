@@ -33,6 +33,8 @@
     <sound>sound\snd_punch</sound>
     <sound>sound\snd_injured</sound>
     <sound>sound\snd_minionAttack</sound>
+    <sound>sound\snd_minion_injured</sound>
+    <sound>sound\snd_slime_injured</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bird_fly</sprite>
