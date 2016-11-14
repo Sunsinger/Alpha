@@ -169,15 +169,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
-    <room>rooms\room2_building1</room>
-    <room>rooms\room1_cave</room>
-    <room>rooms\room0</room>
-    <room>rooms\room3_outside1</room>
-    <room>rooms\InfoScreen</room>
-    <room>rooms\game_over</room>
-    <room>rooms\rm_building_3</room>
-    <room>rooms\rm_outside_2</room>
     <room>rooms\rm_cave_1</room>
+    <room>rooms\rm_outside_2</room>
+    <room>rooms\rm_building_3</room>
+    <room>rooms\game_over</room>
+    <room>rooms\PauseMenu</room>
+    <room>rooms\InfoScreen</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>

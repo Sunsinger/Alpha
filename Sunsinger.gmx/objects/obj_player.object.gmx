@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize variables for player object
-global.roomcamefrom = room2_building1;
+global.roomcamefrom = rm_cave_1;
 image_speed = 0.2;
 grav = 0.2;
 hsp = 0; //horizontal speed

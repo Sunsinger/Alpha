@@ -10,7 +10,34 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>globalvar roomcamefrom;
+roomcamefrom = rm_cave_1;
+
+
+enum states
+{
+    player_normal,
+    light_attack,
+    aerial_attack,
+    take_damage
+    
+}
+
+enum minion_states
+{
+    idle,
+    chase,
+    attack,
+    damaged
+}
+
+enum slime_states
+{
+    idle,
+    chase,
+    attack,
+    charge
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -1031,6 +1058,20 @@
     <instance objName="obj_web" x="1152" y="192" name="inst_97E4F318" locked="0" code="" scaleX="1.80232560634613" scaleY="1.89440989494324" colour="4294967295" rotation="0"/>
     <instance objName="obj_web" x="3712" y="864" name="inst_7399C759" locked="0" code="" scaleX="-0.988372087478638" scaleY="1.09316766262054" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="7008" y="160" name="inst_5487E265" locked="0" code="" scaleX="1.15217387676239" scaleY="1.45664739608765" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5568" y="448" name="inst_075AB7A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5600" y="448" name="inst_FC0A1A3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5632" y="448" name="inst_3BC809AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5664" y="448" name="inst_26922DB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5696" y="448" name="inst_20941E50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5728" y="448" name="inst_EDAC7F45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="5760" y="448" name="inst_EE3183AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slime" x="512" y="224" name="inst_6180B357" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slime" x="1504" y="1312" name="inst_CFDE795E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slime" x="4224" y="608" name="inst_7C1F723F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_minion" x="3104" y="1216" name="inst_BA0B2C8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_minion" x="4672" y="1344" name="inst_5869E2D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="32" y="32" name="inst_6B0154F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inv" x="64" y="32" name="inst_E0F9CD1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

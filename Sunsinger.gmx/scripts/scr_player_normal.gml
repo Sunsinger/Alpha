@@ -19,8 +19,8 @@ if(key_lightAttack && (!place_meeting(x, y+1, obj_wall)) && canAerial){
 //reaction to movements
 move = key_left + key_right;
 //hsp = move * movespeed;
-if(vsp < 20) 
-    vsp += grav;
+//if(vsp < 20) 
+ //   vsp += grav;
 
 //acceleration code
 /*
