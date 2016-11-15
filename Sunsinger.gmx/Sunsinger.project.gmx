@@ -92,6 +92,7 @@
     <sprite>sprites\spr_lever_on</sprite>
     <sprite>sprites\spr_player_aa</sprite>
     <sprite>sprites\spr_hb_player_aa</sprite>
+    <sprite>sprites\spr_rock_top</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -168,6 +169,7 @@
     <object>objects\obj_web_new</object>
     <object>objects\obj_lever</object>
     <object>objects\obj_hb_player_aa</object>
+    <object>objects\obj_rock_top</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
