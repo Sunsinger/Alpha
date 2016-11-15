@@ -4,6 +4,10 @@
 var hsp_final = hsp + hsp_carry;
 hsp_carry = 0; //Only gain extra speed while on platform.
 
+
+//gravity
+if(vsp < 20)  vsp += grav;
+
 //horizontal collision
 if(place_meeting(x+hsp_final,y,obj_wall)){
     while(!place_meeting(x+sign(hsp_final),y,obj_wall)){

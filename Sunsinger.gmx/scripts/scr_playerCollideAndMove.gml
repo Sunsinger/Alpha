@@ -6,9 +6,8 @@ hsp_carry = 0; //Only gain extra speed while on platform.
 //accereration code
 
 
-//hsp = move * movespeed;
-if(vsp < 20) 
-    vsp += grav;
+//gravity
+if(vsp < 20) vsp += grav;
     
 if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, obj_wall))){
     hsp -=(frict * sign(hsp))
