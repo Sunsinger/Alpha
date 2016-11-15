@@ -17,10 +17,7 @@ if(image_index >= 0 && image_index <= 4){
         with(instance_place(x, y, obj_bird)){
             instance_destroy();
         }
-        //Collision between hitbox and enemy
-        with(instance_place(x, y, obj_minion)){
-            instance_destroy();
-        }
+ 
         //Collision between hitbox and enemy
         with(instance_place(x, y, obj_slime)){
             instance_destroy();
