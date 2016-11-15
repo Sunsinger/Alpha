@@ -281,16 +281,18 @@ instance_create(0, 0, effect_shake);
             <string> //minion is invicible for a few frames after getting attacked
  if(!invincible){
  
- audio_play_sound(snd_minion_injured,11,0);
+ audio_play_sound(snd_punch_impact,10,0);
+ //audio_play_sound(snd_minion_injured,11,0);
+ 
  invincible = true;
 
  hp--
 
- if (hp &lt;= 0){
+ if (hp &lt;= 0){ //minion dies
      alarm[10] = 40;
      state = minion_states.death;
      }
- else{
+ else{  //minion takes damage
      alarm[11] = 20;
      state = minion_states.damaged;
      vsp = -5
@@ -324,16 +326,18 @@ instance_create(0, 0, effect_shake);
             <string> //minion is invicible for a few frames after getting attacked
  if(!invincible){
  
- audio_play_sound(snd_minion_injured,11,0);
+ audio_play_sound(snd_punch_impact,10,0);
+ //audio_play_sound(snd_minion_injured,11,0);
+ 
  invincible = true;
 
  hp--
 
- if (hp &lt;= 0){
+ if (hp &lt;= 0){ //minion dies
      alarm[10] = 40;
      state = minion_states.death;
      }
- else{
+ else{   //take damage
      alarm[11] = 20;
      state = minion_states.damaged;
      vsp = -5
