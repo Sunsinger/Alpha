@@ -70,6 +70,30 @@ state = minion_states.chase;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>effect_create_above(ef_smoke, x, y+20, 2, c_white);
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -126,8 +150,20 @@ switch(state){
     case minion_states.damaged:
     { 
      scr_collideAndMove();
+     sprite_index = spr_minion_injured;
      break;
     }
+    
+        case minion_states.death:
+    { 
+    
+     vsp = 0;
+     hsp = 0;
+     image_speed = .1;
+     sprite_index = spr_minion_death;
+     break;
+    }
+    
     
     case minion_states.attack:
     {        
@@ -225,6 +261,49 @@ instance_create(0, 0, effect_shake);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_hb_player_aa">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> //minion is invicible for a few frames after getting attacked
+ if(!invincible){
+ 
+ audio_play_sound(snd_minion_injured,11,0);
+ invincible = true;
+
+ hp--
+
+ if (hp &lt;= 0){
+     alarm[10] = 40;
+     state = minion_states.death;
+     }
+ else{
+     alarm[11] = 20;
+     state = minion_states.damaged;
+     vsp = -5
+     hsp = 4 * -dir
+     }
+ 
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_hb_player_la">
       <action>
         <libid>1</libid>
@@ -242,24 +321,26 @@ instance_create(0, 0, effect_shake);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> 
+            <string> //minion is invicible for a few frames after getting attacked
  if(!invincible){
  
  audio_play_sound(snd_minion_injured,11,0);
  invincible = true;
- alarm[11] = 40;
- 
+
  hp--
 
-if (hp &lt;= 0){
-instance_destroy();
-}
-else{
- vsp = -5
- hsp = 7 * -dir
- }
+ if (hp &lt;= 0){
+     alarm[10] = 40;
+     state = minion_states.death;
+     }
+ else{
+     alarm[11] = 20;
+     state = minion_states.damaged;
+     vsp = -5
+     hsp = 4 * -dir
+     }
  
-  state = minion_states.damaged;
+
 }
 </string>
           </argument>
