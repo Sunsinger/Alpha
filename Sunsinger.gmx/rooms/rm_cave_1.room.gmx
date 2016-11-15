@@ -28,7 +28,8 @@ enum minion_states
     idle,
     chase,
     attack,
-    damaged
+    damaged,
+    death
 }
 
 enum slime_states
