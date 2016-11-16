@@ -1000,32 +1000,12 @@ enum slime_states
     <instance objName="obj_rock" x="6944" y="0" name="inst_A626D82E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="6976" y="0" name="inst_0D954D87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="6624" y="0" name="inst_536310D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_web" x="96" y="960" name="inst_0529ED00" locked="0" code="" scaleX="-0.970760226249695" scaleY="1.03703701496124" colour="4294967295" rotation="0"/>
-    <instance objName="obj_web" x="1152" y="192" name="inst_97E4F318" locked="0" code="" scaleX="1.80232560634613" scaleY="1.89440989494324" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="7008" y="160" name="inst_5487E265" locked="0" code="" scaleX="1.15217387676239" scaleY="1.45664739608765" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="512" y="224" name="inst_6180B357" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="1504" y="1312" name="inst_CFDE795E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slime" x="4224" y="544" name="inst_7C1F723F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="2400" y="1152" name="inst_BA0B2C8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="4672" y="1344" name="inst_5869E2D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="608" y="704" name="inst_D5D82928" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="576" y="704" name="inst_2EEEE3A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="544" y="704" name="inst_5ECF9E37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="512" y="704" name="inst_2E51BEEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="480" y="704" name="inst_FD3B42E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="448" y="704" name="inst_280AA874" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="416" y="704" name="inst_59D7F240" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="384" y="704" name="inst_BAC96FAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="352" y="704" name="inst_F6823808" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="320" y="704" name="inst_FDED2DDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="288" y="704" name="inst_4CD51C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="256" y="704" name="inst_25B913F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="224" y="704" name="inst_292F2E53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="192" y="704" name="inst_5B0D7361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="160" y="704" name="inst_A159E2A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="128" y="704" name="inst_596466E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="96" y="704" name="inst_0A5C7641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_top" x="64" y="704" name="inst_D7092196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_top" x="864" y="928" name="inst_B94D2FB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_top" x="928" y="928" name="inst_19461FA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_top" x="992" y="928" name="inst_6B907559" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1825,11 +1805,9 @@ enum slime_states
     <instance objName="obj_rock_new" x="2720" y="1440" name="inst_F331D432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2752" y="1440" name="inst_85FCB93D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2784" y="1440" name="inst_4FBE98CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_new" x="2784" y="1408" name="inst_7F8E15A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2816" y="1408" name="inst_578C6A44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2848" y="1408" name="inst_E1E2484D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2816" y="1408" name="inst_94C2B38B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_new" x="2784" y="1408" name="inst_AC3EBA95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2784" y="1440" name="inst_4037FE86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2752" y="1440" name="inst_0B460B34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_new" x="2720" y="1440" name="inst_4C114AD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2646,6 +2624,9 @@ enum slime_states
     <instance objName="obj_rock" x="0" y="160" name="inst_6C4BE053" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="0" y="192" name="inst_F5C718BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="0" y="224" name="inst_C866AEDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lever" x="480" y="288" name="inst_B5563AFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inv" x="224" y="96" name="inst_E9BC958B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="192" y="128" name="inst_4831D4C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

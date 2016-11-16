@@ -99,6 +99,7 @@
     <sprite>sprites\spr_minion_death</sprite>
     <sprite>sprites\spr_bird_death</sprite>
     <sprite>sprites\spr_stand_alone</sprite>
+    <sprite>sprites\spr_fire</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -108,6 +109,7 @@
     <background>background\bg_0_2</background>
     <background>background\birds</background>
     <background>background\cave_bg</background>
+    <background>background\bg_build</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_bird_patrol_2_1</path>
@@ -178,6 +180,7 @@
     <object>objects\obj_rock_top</object>
     <object>objects\obj_bird_fall</object>
     <object>objects\obj_stand_alone</object>
+    <object>objects\obj_fire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>

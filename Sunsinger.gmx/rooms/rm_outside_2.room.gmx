@@ -797,6 +797,7 @@
     <instance objName="obj_stand_alone" x="4512" y="1248" name="inst_B9A3D5B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stand_alone" x="3968" y="1632" name="inst_BCB4A616" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stand_alone" x="3328" y="1888" name="inst_630F9E7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lever" x="2272" y="1728" name="inst_1788C0AA" locked="0" code="" scaleX="1.19565212726593" scaleY="1.29629623889923" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
