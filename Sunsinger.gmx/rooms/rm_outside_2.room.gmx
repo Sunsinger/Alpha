@@ -315,14 +315,6 @@
     <instance objName="obj_floor_out_sm" x="5248" y="1344" name="inst_91BB9CCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="6528" y="1344" name="inst_F7774A8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="7552" y="32" name="inst_50F73455" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="4480" y="1248" name="inst_EBB17DD9" locked="0" code="" scaleX="-1.10000002384186" scaleY="0.984848499298096" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="4544" y="1248" name="inst_E0596CF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3616" y="1152" name="inst_3B283B24" locked="0" code="" scaleX="-1.10000002384186" scaleY="0.984848499298096" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3680" y="1152" name="inst_D41C44BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3296" y="1856" name="inst_13808FBD" locked="0" code="" scaleX="-1.10000002384186" scaleY="0.984848499298096" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3360" y="1856" name="inst_D40D5FB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3968" y="1600" name="inst_CF2199F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_edge_big" x="3904" y="1600" name="inst_F2B71372" locked="0" code="" scaleX="-1.10000002384186" scaleY="0.984848499298096" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="2144" y="1792" name="inst_F28308E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="2176" y="1792" name="inst_77E9EDC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="2208" y="1792" name="inst_5BCFAEEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -333,7 +325,6 @@
     <instance objName="obj_floor_out_sm" x="2368" y="1792" name="inst_FD6D6653" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="2400" y="1792" name="inst_870CB622" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_out_sm" x="2432" y="1792" name="inst_36706F95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cloud" x="2880" y="1792" name="inst_F1E891D7" locked="0" code="" scaleX="1.15627670288086" scaleY="1.26800000667572" colour="4294967295" rotation="0"/>
     <instance objName="edge_bottom" x="5280" y="1408" name="inst_6C9AA983" locked="0" code="" scaleX="-1.14999997615814" scaleY="1.11363637447357" colour="4294967295" rotation="0"/>
     <instance objName="edge_bottom" x="5344" y="1472" name="inst_AA604A7D" locked="0" code="" scaleX="-1.27848100662231" scaleY="0.992424249649048" colour="4294967295" rotation="0"/>
     <instance objName="edge_bottom" x="5440" y="1408" name="inst_7F100EFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -792,7 +783,6 @@
     <instance objName="edge_bottom" x="896" y="1440" name="inst_B9FF6D73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="edge_bottom" x="896" y="1408" name="inst_B994C800" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="4512" y="-128" name="inst_676F4D5D" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cloud" x="5632" y="1152" name="inst_AC914870" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="6560" y="1184" name="inst_962F2667" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="5440" y="1184" name="inst_A8014F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bird" x="2208" y="864" name="inst_F386B5B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -803,6 +793,10 @@
     <instance objName="obj_cloud" x="-256" y="928" name="inst_357039AA" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="2016" y="320" name="inst_FB7C18C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inv" x="2080" y="384" name="inst_7578D444" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stand_alone" x="3648" y="1248" name="inst_D4802DD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stand_alone" x="4512" y="1248" name="inst_B9A3D5B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stand_alone" x="3968" y="1632" name="inst_BCB4A616" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stand_alone" x="3328" y="1888" name="inst_630F9E7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
