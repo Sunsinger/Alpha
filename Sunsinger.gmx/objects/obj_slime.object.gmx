@@ -178,9 +178,7 @@ switch(state){
             audio_play_sound(snd_slime_shoot,0,0); //play shooting sound
             
             //effect_create_below(ef_smokeup, x, y, choose(0, 1, 2), c_blue);
-            with(instance_create(x, y, obj_slime_projectile)){
-                speed = 10 * obj_slime.dir;
-                }
+            instance_create(x, y, obj_slime_projectile);
              
               
       }
