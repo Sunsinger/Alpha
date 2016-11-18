@@ -101,6 +101,7 @@
     <sprite>sprites\spr_stand_alone</sprite>
     <sprite>sprites\spr_fire</sprite>
     <sprite>sprites\spr_spikes</sprite>
+    <sprite>sprites\spr_spikes_sideways</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -186,6 +187,7 @@
     <object>objects\obj_stand_alone</object>
     <object>objects\obj_fire</object>
     <object>objects\obj_spikes</object>
+    <object>objects\obj_spikes_sideways</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
