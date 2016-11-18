@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>0</showcolour>
-  <code>/*
+  <code>global.door = 0; 
+/*
 enum states
 {
     player_normal,

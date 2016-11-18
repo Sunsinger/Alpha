@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>globalvar roomcamefrom;
 roomcamefrom = rm_cave_1;
-
+global.door = 0; 
 
 enum states
 {
