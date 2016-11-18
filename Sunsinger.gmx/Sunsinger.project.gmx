@@ -128,6 +128,9 @@
     <script>scripts\scr_screen_capture.gml</script>
     <script>scripts\scr_aerialAttack.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_pause</font>
   </fonts>
