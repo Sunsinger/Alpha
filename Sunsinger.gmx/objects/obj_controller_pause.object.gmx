@@ -118,7 +118,7 @@ if (game_paused = true &amp;&amp; visible = true)
   // Draw our pause screen
   draw_background_ext(pause_bg,0,0,background_xscale[0],background_yscale[0],0,pause_col,1); 
   draw_set_font(fnt_pause);
-  draw_text_colour((room_width/2)-60,(room_height/2)-30,"PAUSE",c_white,c_white,c_white,c_white,1);
+  draw_text_colour((view_wview[0]/2)-60,(view_hview[0]/2)-30,"PAUSE",c_white,c_white,c_white,c_white,1);
   }
 </string>
           </argument>

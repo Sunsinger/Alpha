@@ -191,7 +191,6 @@
     <room>rooms\rm_outside_2</room>
     <room>rooms\rm_building_3</room>
     <room>rooms\game_over</room>
-    <room>rooms\PauseMenu</room>
     <room>rooms\InfoScreen</room>
   </rooms>
   <constants number="1">
