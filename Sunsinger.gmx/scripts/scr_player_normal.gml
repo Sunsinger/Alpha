@@ -16,6 +16,24 @@ if(key_lightAttack && (!place_meeting(x, y+1, obj_wall)) && canAerial){
     audio_play_sound(snd_punch, 10, 0); //Placeholder sound
 }
 
+
+//Shootprojectile
+if(key_shoot){
+        //Create hitbox
+    with(instance_create(x+15, y-20, obj_fireball)){
+        //Flip based on direction
+        image_xscale = other.image_xscale;
+    }
+    
+    audio_play_sound(snd_punch, 10, 0); //Placeholder sound
+}
+
+
+
+
+
+
+
 //reaction to movements
 move = key_left + key_right;
 //hsp = move * movespeed;
