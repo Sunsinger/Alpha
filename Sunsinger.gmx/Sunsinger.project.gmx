@@ -102,6 +102,7 @@
     <sprite>sprites\spr_fire</sprite>
     <sprite>sprites\spr_spikes</sprite>
     <sprite>sprites\spr_spikes_sideways</sprite>
+    <sprite>sprites\spr_fireball</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -188,6 +189,7 @@
     <object>objects\obj_fire</object>
     <object>objects\obj_spikes</object>
     <object>objects\obj_spikes_sideways</object>
+    <object>objects\obj_fireball</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
