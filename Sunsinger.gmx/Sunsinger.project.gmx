@@ -103,6 +103,7 @@
     <sprite>sprites\spr_spikes</sprite>
     <sprite>sprites\spr_spikes_sideways</sprite>
     <sprite>sprites\spr_fireball</sprite>
+    <sprite>sprites\spr_playerDeath</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -193,13 +194,15 @@
     <object>objects\obj_spikes</object>
     <object>objects\obj_spikes_sideways</object>
     <object>objects\obj_fireball</object>
+    <object>objects\obj_gameoverController</object>
+    <object>objects\obj_playerDeath</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\game_over</room>
     <room>rooms\TitleScreen</room>
     <room>rooms\rm_building_3</room>
     <room>rooms\rm_cave_1</room>
     <room>rooms\rm_outside_2</room>
-    <room>rooms\game_over</room>
     <room>rooms\InfoScreen</room>
   </rooms>
   <constants number="1">

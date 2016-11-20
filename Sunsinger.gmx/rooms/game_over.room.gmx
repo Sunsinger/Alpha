@@ -51,10 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_restartGame" x="1120" y="544" name="inst_627D293E" locked="0" code="" scaleX="1.13043475151062" scaleY="1.11304342746735" colour="4294967295" rotation="0"/>
-    <instance objName="obj_gameOver" x="960" y="288" name="inst_7F168099" locked="0" code="" scaleX="1.59453308582306" scaleY="1.55737709999084" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mainMenu" x="736" y="576" name="inst_CE0E5859" locked="0" code="" scaleX="1.12040138244629" scaleY="1.10434782505035" colour="4294967295" rotation="0"/>
-    <instance objName="obj_quit" x="800" y="736" name="inst_0961F4B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
