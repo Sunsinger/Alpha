@@ -217,6 +217,36 @@ room_goto(game_over);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(place_meeting(x,y,obj_life)){
+if(lives &lt; maxLives){
+lives++;
+with instance_place(x,y,obj_life){
+instance_destroy();
+}
+
+}
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_spikes">
       <action>
@@ -259,37 +289,6 @@ room_goto(game_over);
           <argument>
             <kind>1</kind>
             <string>scr_takeDamage();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_life">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>for(i =0; i &lt; maxItems; i++){
-if(global.inventory[i] == -1){
-global.inventory[i] = 0;
-break;
-}
-}
-with(obj_life){
-    instance_destroy();
-}
 </string>
           </argument>
         </arguments>

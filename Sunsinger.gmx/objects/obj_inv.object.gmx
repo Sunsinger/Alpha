@@ -89,7 +89,7 @@ y=view_yview[0]+offset_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(showInv){
+            <string>/*if(showInv){
    
     draw_set_alpha(1);
     for (i=0; i&lt;maxItems; i+=1)
@@ -102,7 +102,7 @@ y=view_yview[0]+offset_y;
             draw_sprite(spr_inventory,global.inventory[i],x+350+(i * 70),y)
         }
     };
-}
+}*/
 
 </string>
           </argument>

@@ -88,6 +88,7 @@ state = minion_states.chase;
           <argument>
             <kind>1</kind>
             <string>effect_create_above(ef_smoke, x, y+20, 2, c_white);
+scr_enemyDrop(x,y);
 instance_destroy();
 </string>
           </argument>

@@ -61,6 +61,7 @@ path_start(pth_bird_patrol_2_1, movespeed, path_action_reverse, false);
             <kind>1</kind>
             <string>audio_play_sound(snd_punch_impact,12,0);
 instance_create(x, y, obj_bird_fall);
+scr_enemyDrop(x,y);
 </string>
           </argument>
         </arguments>
@@ -160,7 +161,8 @@ else if(path_index != pth_bird_patrol_2_1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>scr_enemyDrop(x,y);
+instance_destroy();
 </string>
           </argument>
         </arguments>

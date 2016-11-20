@@ -130,6 +130,7 @@
     <script>scripts\scr_inventory.gml</script>
     <script>scripts\scr_screen_capture.gml</script>
     <script>scripts\scr_aerialAttack.gml</script>
+    <script>scripts\scr_enemyDrop.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -192,9 +193,9 @@
     <object>objects\obj_fireball</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_outside_2</room>
     <room>rooms\TitleScreen</room>
     <room>rooms\rm_cave_1</room>
-    <room>rooms\rm_outside_2</room>
     <room>rooms\rm_building_3</room>
     <room>rooms\game_over</room>
     <room>rooms\InfoScreen</room>

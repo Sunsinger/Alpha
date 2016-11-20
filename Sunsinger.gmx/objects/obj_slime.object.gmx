@@ -65,6 +65,7 @@ counter = 0;
           <argument>
             <kind>1</kind>
             <string>effect_create_below(ef_explosion, x, y, .8, c_lime);
+scr_enemyDrop(x,y);
 </string>
           </argument>
         </arguments>
@@ -270,7 +271,6 @@ if(obj_player.y &lt; y-66)
             <kind>1</kind>
             <string>audio_play_sound(snd_punch_impact,10,0);
 audio_play_sound(snd_slime_injured,10,0);
-
 instance_destroy();
 </string>
           </argument>
@@ -296,7 +296,6 @@ instance_destroy();
             <kind>1</kind>
             <string> audio_play_sound(snd_punch_impact,10,0);
  audio_play_sound(snd_slime_injured,11,0);
- 
  instance_destroy();
 </string>
           </argument>
