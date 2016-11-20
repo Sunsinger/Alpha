@@ -196,9 +196,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
+    <room>rooms\rm_building_3</room>
     <room>rooms\rm_cave_1</room>
     <room>rooms\rm_outside_2</room>
-    <room>rooms\rm_building_3</room>
     <room>rooms\game_over</room>
     <room>rooms\InfoScreen</room>
   </rooms>
