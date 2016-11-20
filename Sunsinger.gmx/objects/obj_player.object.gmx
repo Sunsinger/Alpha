@@ -34,7 +34,8 @@ hsp_carry = 0; //Platform movespeed
 vsp = 0; //vertifcal speed
 jumpspeed = 6;
 movespeed  = 7; 
-recently_hit = false;
+invulnerable = false;
+spike_hit = false;
 counter = 0;
 lives = maxLives;
 canAerial = 1;
@@ -58,6 +59,31 @@ MAX_SPEED = 8;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>spike_hit = false; 
+solid = true; 
+state = states.player_normal; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -75,7 +101,7 @@ MAX_SPEED = 8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>recently_hit = false; 
+            <string>invulnerable = false; 
 solid = true; 
 state = states.player_normal; 
 </string>
@@ -265,7 +291,11 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_takeDamage();
+            <string>if(!spike_hit){
+    spike_hit = true;
+    scr_takeDamage();
+    alarm[1] = 45;
+}
 </string>
           </argument>
         </arguments>
@@ -393,7 +423,7 @@ action_move_to(288,832);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if recently_hit 
+            <string>if invulnerable || spike_hit
 {
     if counter mod 10 = 0
     {
