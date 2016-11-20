@@ -113,6 +113,8 @@
     <background>background\birds</background>
     <background>background\cave_bg</background>
     <background>background\bg_build</background>
+    <background>background\bg_teal</background>
+    <background>background\bg_city</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_bird_patrol_2_1</path>
