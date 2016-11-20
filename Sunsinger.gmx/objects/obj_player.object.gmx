@@ -41,7 +41,7 @@ lives = maxLives;
 canAerial = 1;
 
 state = states.player_normal;
-
+gamepad_set_axis_deadzone(0,0.5);
 /*
 Dont have other keys in here because no other object needed to check
 if they existed at any point, whereas key_down is checked by obj_platform

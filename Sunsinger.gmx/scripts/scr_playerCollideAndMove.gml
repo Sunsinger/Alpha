@@ -1,4 +1,4 @@
-
+scr_getInputs();
 
 //Need new varaible because adding to hsp would be added every frame, causing acceleration
 var hsp_final = hsp + hsp_carry;
@@ -9,7 +9,7 @@ hsp_carry = 0; //Only gain extra speed while on platform.
 //gravity
 if(vsp < 20) vsp += grav;
     
-if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, obj_wall))){
+if(!key_right&&!key_left && (place_meeting(x,y+1, obj_wall))){
     hsp -=(frict * sign(hsp))
     //error checking to ensure player stops
     if(hsp >= -.5 && hsp <= .5) 

@@ -1,4 +1,4 @@
-
+scr_getInputs(); 
 
 //Need new varaible because adding to hsp would be added every frame, causing acceleration
 var hsp_final = hsp + hsp_carry;

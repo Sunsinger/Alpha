@@ -1,4 +1,4 @@
-scr_getInputs(1);
+scr_getInputs();
 
 //Are you light attacking?
 if(key_lightAttack && (place_meeting(x,y+1, obj_wall))){
@@ -42,7 +42,7 @@ move = key_left + key_right;
 
 //acceleration code
 /*
-if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, obj_wall))){
+if(!key_right&&!key_left && (place_meeting(x,y+1, obj_wall))){
     hsp -=(frict * sign(hsp))
     //error checking to ensure player stops
     if(hsp >= -.5 && hsp <= .5) 
@@ -54,25 +54,25 @@ if(!keyboard_check(vk_right)&&!keyboard_check(vk_left) && (place_meeting(x,y+1, 
 if((place_meeting(x,y+1, obj_wall))){
     doublejump = 1; //restore double jump when touching ground
 
-    if(keyboard_check(vk_left)){
+    if(key_left){
         if(hsp > -MAX_SPEED) hsp -=acc;
         facing = -1;
     }
 
-    if(keyboard_check(vk_right)){
+    if(key_right){
         if(hsp < MAX_SPEED) 
             hsp +=acc;
         facing = 1;
     }
 }
 else{ //less conttrol while in the air
-    if(keyboard_check(vk_left)){
+    if(key_left){
         if(hsp > -MAX_SPEED) 
             hsp -=acc/2;    
         facing = -1;
     }
 
-    if(keyboard_check(vk_right)){
+    if(key_right){
         if(hsp < MAX_SPEED) 
             hsp +=acc/2;
         facing = 1;
@@ -137,5 +137,5 @@ else{
 
 
 
-
+image_xscale = facing;
 scr_playerCollideAndMove();
