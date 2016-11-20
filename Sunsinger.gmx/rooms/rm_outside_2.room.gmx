@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>7500</width>
-  <height>2000</height>
+  <height>1500</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -799,6 +799,7 @@
     <instance objName="effect_shake" x="-1120" y="1632" name="inst_35884504" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller_pause" x="1856" y="32" name="inst_7087B5EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inv" x="96" y="64" name="inst_4D9A0C1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="effect_shake" x="1856" y="3776" name="inst_A59C9D3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

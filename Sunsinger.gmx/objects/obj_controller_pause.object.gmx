@@ -110,13 +110,13 @@ if (game_paused = true &amp;&amp; visible = true)
   if (deactivated = false)
     {
     // Capture the screen
-    pause_bg = scr_screen_capture();
+    pause_bg = scr_screen_capture(room_width,room_height);
     // Deactivate all instances besides this controler
     instance_deactivate_all(true);
     deactivated = true;
     }
   // Draw our pause screen
-  draw_background_ext(pause_bg,0,0,background_xscale[0],background_yscale[0],0,pause_col,1); 
+  draw_background_ext(pause_bg,0,0, background_xscale[0],background_yscale[0],0,pause_col,1); 
   draw_set_font(fnt_pause);
   draw_text_colour((view_wview[0]/2)-60,(view_hview[0]/2)-30,"PAUSE",c_white,c_white,c_white,c_white,1);
   }

@@ -1,8 +1,11 @@
 // Returns the background data captured on the screen which can then be drawn later on.
-
+var roomw;
+var roomh;
+roomw = argument0;
+roomh = argument1;
 var ret = -1;
-var sfc_width = surface_get_width(application_surface);
-var sfc_height = surface_get_height(application_surface);
+var sfc_width = roomw;//surface_get_width(application_surface);
+var sfc_height = roomh;//surface_get_height(application_surface);
 
 // Create drawing surface
 var sfc = surface_create(sfc_width,sfc_height);
