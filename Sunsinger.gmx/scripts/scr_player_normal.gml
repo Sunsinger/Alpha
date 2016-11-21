@@ -17,9 +17,13 @@ if(key_lightAttack && (!place_meeting(x, y+1, obj_wall)) && canAerial){
 }
 
 
-//Shootprojectile
-if(key_shoot){
+//Shoot projectile if cooldown has finished
+if(key_shoot && obj_player.canShoot){
         //Create hitbox
+        
+    obj_player.canShoot = false;
+    obj_player.alarm[2] = 180;
+    
     with(instance_create(x+15, y-20, obj_fireball)){
         //Flip based on direction
         image_xscale = other.image_xscale;
