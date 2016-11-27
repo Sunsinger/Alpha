@@ -130,6 +130,8 @@ state = states.player_normal;
             <string>invulnerable = false; 
 solid = true; 
 state = states.player_normal; 
+gamepad_set_vibration(0, 0, 0);
+
 </string>
           </argument>
         </arguments>
