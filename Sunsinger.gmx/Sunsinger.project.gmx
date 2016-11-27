@@ -40,7 +40,6 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bird_fly</sprite>
-    <sprite>sprites\spr_border</sprite>
     <sprite>sprites\spr_health</sprite>
     <sprite>sprites\spr_minion_idle</sprite>
     <sprite>sprites\spr_minion_run</sprite>
@@ -50,7 +49,6 @@
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_player_run</sprite>
-    <sprite>sprites\spr_potion</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spir_minion_idle</sprite>
     <sprite>sprites\spr_hb_player_la</sprite>
@@ -66,7 +64,6 @@
     <sprite>sprites\spr_healthblockPlayer</sprite>
     <sprite>sprites\spr_info</sprite>
     <sprite>sprites\spr_infoscren</sprite>
-    <sprite>sprites\spr_inventory</sprite>
     <sprite>sprites\spr_pause</sprite>
     <sprite>sprites\spr_quit</sprite>
     <sprite>sprites\spr_returnMenu</sprite>
@@ -125,11 +122,8 @@
     <script>scripts\scr_playerCollideAndMove.gml</script>
     <script>scripts\scr_getInputs.gml</script>
     <script>scripts\scr_lightAttack.gml</script>
-    <script>scripts\scr_loseHealth.gml</script>
     <script>scripts\scr_player_normal.gml</script>
     <script>scripts\scr_takeDamage.gml</script>
-    <script>scripts\scr_inventory.gml</script>
-    <script>scripts\scr_screen_capture.gml</script>
     <script>scripts\scr_aerialAttack.gml</script>
     <script>scripts\scr_enemyDrop.gml</script>
   </scripts>
@@ -141,20 +135,17 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_bird</object>
-    <object>objects\obj_inv</object>
+    <object>objects\obj_healthBar</object>
     <object>objects\obj_minion</object>
     <object>objects\obj_moving_platform_h</object>
-    <object>objects\obj_pause</object>
     <object>objects\obj_platform</object>
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_life</object>
-    <object>objects\obj_livesBar</object>
     <object>objects\obj_hb_player_la</object>
     <object>objects\obj_slime</object>
     <object>objects\obj_slime_projectile</object>
     <object>objects\obj_hb_minion_atk</object>
-    <object>objects\obj_controller_pause</object>
     <object>objects\obj_info</object>
     <object>objects\obj_infoScreen</object>
     <object>objects\obj_quit</object>
@@ -191,6 +182,7 @@
     <object>objects\obj_fireball</object>
     <object>objects\obj_gameoverController</object>
     <object>objects\obj_playerDeath</object>
+    <object>objects\obj_pause_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>

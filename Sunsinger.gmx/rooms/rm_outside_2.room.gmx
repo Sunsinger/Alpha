@@ -792,8 +792,7 @@
     <instance objName="obj_stand_alone" x="3968" y="1632" name="inst_BCB4A616" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stand_alone" x="3328" y="1888" name="inst_630F9E7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lever" x="2272" y="1728" name="inst_1788C0AA" locked="0" code="" scaleX="1.19565212726593" scaleY="1.29629623889923" colour="4294967295" rotation="0"/>
-    <instance objName="obj_controller_pause" x="1856" y="32" name="inst_7087B5EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_inv" x="96" y="64" name="inst_4D9A0C1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_healthBar" x="96" y="64" name="inst_4D9A0C1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1088" y="704" name="inst_CD428A1C" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="6624" y="864" name="inst_5D10B338" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="3552" y="2016" name="inst_5E16678F" locked="0" code="" scaleX="3.60375738143921" scaleY="4.69739484786987" colour="4294967295" rotation="0"/>
