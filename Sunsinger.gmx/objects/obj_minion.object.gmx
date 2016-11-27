@@ -160,15 +160,17 @@ switch(state){
         }
         
         //Minion decides what to do based on distance from player
-        
-        if((distance_to_object(obj_player) &lt; 700) &amp;&amp; (place_meeting(x+(20*dir), y, obj_wall)) &amp;&amp; jumpCounter &gt;= 60){
+    
+        //Jump over obstacle
+        if((distance_to_object(obj_player) &lt; 700) &amp;&amp; (place_meeting(x+(20*dir), y, obj_wall)) &amp;&amp; (place_meeting(x, y+1, obj_wall)) &amp;&amp; jumpCounter &gt;= 60){
         vsp = -10;
         jumpCounter = 0;
         }
         
-        if(distance_to_object(obj_player) &lt; 73)
+        else if(distance_to_object(obj_player) &lt; 73)
             state = minion_states.attack;
-        if(distance_to_object(obj_player) &gt; 700)
+            
+        else if(distance_to_object(obj_player) &gt; 700)
             state = minion_states.idle;
         break;
     }
