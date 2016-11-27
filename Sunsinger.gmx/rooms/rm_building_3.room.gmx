@@ -545,7 +545,6 @@ enum slime_states
     <instance objName="obj_floor_inside" x="5408" y="256" name="inst_73BEDE48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="5216" y="160" name="inst_BA3DEEC1" locked="0" code="" scaleX="2.64444446563721" scaleY="1.05813956260681" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="160" y="128" name="inst_DC32E5E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="effect_shake" x="160" y="128" name="inst_D25D64EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_inside" x="2240" y="448" name="inst_F6B398C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_inside" x="2176" y="448" name="inst_3DD27366" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_inside" x="2112" y="448" name="inst_5810B706" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -783,7 +782,6 @@ enum slime_states
     <instance objName="obj_fire" x="5728" y="2144" name="inst_EA0C2356" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inv" x="192" y="128" name="inst_BBBD2A97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller_pause" x="224" y="128" name="inst_7A4B2371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="effect_shake" x="1984" y="-320" name="inst_7D966A0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -751,7 +751,6 @@ enum slime_states
     <instance objName="obj_rock" x="9920" y="0" name="inst_B06D1381" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="9952" y="0" name="inst_0111C45A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="9984" y="0" name="inst_50D43129" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ivn" x="8192" y="576" name="inst_B29F988A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="10016" y="0" name="inst_18FA7164" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="10048" y="0" name="inst_DD8A2FAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="10080" y="0" name="inst_09848F7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

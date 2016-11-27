@@ -76,8 +76,6 @@
     <sprite>sprites\spr_gotoMain</sprite>
     <sprite>sprites\spr_gameOver</sprite>
     <sprite>sprites\spr_playerFlinch</sprite>
-    <sprite>sprites\spr_bat</sprite>
-    <sprite>sprites\spr_ivn</sprite>
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\bush</sprite>
     <sprite>sprites\cloud</sprite>
@@ -142,7 +140,6 @@
     <font>fonts\fnt_pause</font>
   </fonts>
   <objects name="objects">
-    <object>objects\effect_shake</object>
     <object>objects\obj_bird</object>
     <object>objects\obj_inv</object>
     <object>objects\obj_minion</object>
@@ -169,7 +166,6 @@
     <object>objects\obj_gameOver</object>
     <object>objects\obj_mainMenu</object>
     <object>objects\edge_bottom</object>
-    <object>objects\obj_bat</object>
     <object>objects\obj_bush</object>
     <object>objects\obj_cloud</object>
     <object>objects\obj_door</object>
@@ -181,7 +177,6 @@
     <object>objects\obj_web</object>
     <object>objects\controller</object>
     <object>objects\obj_home</object>
-    <object>objects\obj_ivn</object>
     <object>objects\obj_out_big</object>
     <object>objects\obj_rock_new</object>
     <object>objects\obj_web_new</object>

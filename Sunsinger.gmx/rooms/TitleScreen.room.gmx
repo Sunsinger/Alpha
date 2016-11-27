@@ -56,7 +56,6 @@
     <instance objName="obj_info" x="928" y="960" name="inst_51AA5CA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_quit" x="928" y="768" name="inst_960E9C0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_title_music" x="192" y="384" name="inst_2AD335B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="effect_shake" x="384" y="-128" name="inst_E5DF3D25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
