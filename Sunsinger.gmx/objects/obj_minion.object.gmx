@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initial variables for minion object
+            <string>///Initial variables for minion object
 state = minion_states.idle;
 image_speed = 0.2;
 grav = 0.2;
@@ -61,7 +61,7 @@ hp = 4; //Minion health
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Runs after minion is injured and invincibility has expired
+            <string>///Runs after minion is injured and invincibility has expired
 invincible = false;
 state = minion_states.chase;
 </string>
@@ -86,8 +86,7 @@ state = minion_states.chase;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Runs when minion dies
+            <string>///Runs when minion dies
 
 //Creates Smoke effects
 effect_create_above(ef_smoke, x, y+20, 1, c_white);
@@ -119,7 +118,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Variable that determines time between attacks
+            <string>///Variable that determines time between attacks
 attackCounter++;
 
 
@@ -236,7 +235,7 @@ scr_collideAndMove();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Minion is invicible for a few frames after getting attacked
+            <string>///Minion is invicible for a few frames after getting attacked
  if(!invincible){
  
  audio_play_sound(snd_punch_impact,10,0);
@@ -281,7 +280,7 @@ scr_collideAndMove();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> //minion is invincible for a few frames after getting attacked
+            <string> ///minion is invincible for a few frames after getting attacked
  if(!invincible){
  
  audio_play_sound(snd_punch_impact,10,0);
@@ -325,7 +324,7 @@ scr_collideAndMove();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Attack ends
+            <string>///Attack ends
 if(sprite_index == spr_minion_atk){
     attackCounter = 0;
     state = minion_states.idle;

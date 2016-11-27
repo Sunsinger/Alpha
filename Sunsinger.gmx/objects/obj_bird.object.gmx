@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initial variables for enemy object
+            <string>///Initial variables for enemy object
 start_x = x;
 start_y = y;
 
@@ -59,7 +59,8 @@ path_start(pth_bird_patrol_2_1, movespeed, path_action_reverse, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(snd_punch_impact,12,0);
+            <string>///play death + audio
+audio_play_sound(snd_punch_impact,12,0);
 instance_create(x, y, obj_bird_fall);
 scr_enemyDrop(x,y);
 </string>
@@ -107,7 +108,8 @@ scr_enemyDrop(x,y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_x = obj_player.x;
+            <string>///check range and execute patrol
+player_x = obj_player.x;
 player_y = obj_player.y;
 
 if( (direction &gt;= 0 &amp;&amp; direction &lt;= 90) || (direction &gt;=270 &amp;&amp; direction &lt;= 360) )

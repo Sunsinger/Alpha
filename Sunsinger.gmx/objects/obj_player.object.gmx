@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize variables for player object
+            <string>///Initialize variables for player object
 global.roomcamefrom = rm_cave_1;
 image_speed = 0.2;
 grav = 0.2;
@@ -160,63 +160,6 @@ case states.light_attack: scr_lightAttack(); break;
 case states.aerial_attack: scr_aerialAttack(); break;
 case states.take_damage: scr_takeDamage(); break;
 }
-
-/*
-//get player's input
-key_right = keyboard_check(vk_right);
-key_left = -keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(vk_space);
-
-//reaction to movements
-move = key_left + key_right;
-hsp = move * movespeed;
-if(vsp &lt; 10) vsp += grav;
-
-
-
-if (place_meeting(x,y+1,obj_wall)){
-vsp = key_jump * -jumpspeed
-}
-
-//horizontal collision
-if(place_meeting(x+hsp,y,obj_wall)){
-    while(!place_meeting(x+sign(hsp),y,obj_wall)){
-    x += sign(hsp);
-    }
-    hsp = 0;
-}
-
-x += hsp;
-
-
-//vertical collision
-if(place_meeting(x,y+vsp,obj_wall)){
-    while(!place_meeting(x,y+sign(vsp),obj_wall)){
-    y += sign(vsp);
-    }
-    vsp = 0;
-}
-
-y += vsp;
-
-
-//Animate
-
-
-if (move != 0) image_xscale = move;
-if (place_meeting(x,y+1, obj_wall)){
-    if (move != 0){
-     sprite_index = spr_player_run;
-    }
-    else{
-     sprite_index = spr_player_idle;
-    }
-}
-else{
-    if (vsp &lt; 0) sprite_index = spr_player_jump; else sprite_index = spr_player_fall;
-}
-
-*/
 
 
 
@@ -369,7 +312,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Go back to state normal after light attack
+            <string>///Go back to state normal after light attack
 if(sprite_index == spr_player_la)
     state = states.player_normal;
 
