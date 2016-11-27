@@ -11,9 +11,6 @@ if(image_index >= 0 && image_index <= 4){
         //Flip based on direction
         image_xscale = other.image_xscale;
     }
-    
-
-
 }
 
 attacking = false;

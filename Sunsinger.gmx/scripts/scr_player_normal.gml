@@ -16,7 +16,6 @@ if(key_lightAttack && (!place_meeting(x, y+1, obj_wall)) && canAerial){
     audio_play_sound(snd_punch, 10, 0); //Placeholder sound
 }
 
-
 //Shoot projectile if cooldown has finished
 if(key_shoot && obj_player.canShoot){
         //Create hitbox
@@ -27,32 +26,12 @@ if(key_shoot && obj_player.canShoot){
     with(instance_create(x+15, y-20, obj_fireball)){
         //Flip based on direction
         image_xscale = other.image_xscale;
-    }
-    
+    }    
     audio_play_sound(snd_punch, 10, 0); //Placeholder sound
 }
 
-
-
-
-
-
-
 //reaction to movements
 move = key_left + key_right;
-//hsp = move * movespeed;
-//if(vsp < 20) 
- //   vsp += grav;
-
-//acceleration code
-/*
-if(!key_right&&!key_left && (place_meeting(x,y+1, obj_wall))){
-    hsp -=(frict * sign(hsp))
-    //error checking to ensure player stops
-    if(hsp >= -.5 && hsp <= .5) 
-        hsp = 0;
-}
-*/
 
 //full movement when on ground
 if((place_meeting(x,y+1, obj_wall))){
@@ -62,7 +41,6 @@ if((place_meeting(x,y+1, obj_wall))){
         if(hsp > -MAX_SPEED) hsp -=acc;
         facing = -1;
     }
-
     if(key_right){
         if(hsp < MAX_SPEED) 
             hsp +=acc;
@@ -75,14 +53,12 @@ else{ //less conttrol while in the air
             hsp -=acc/2;    
         facing = -1;
     }
-
     if(key_right){
         if(hsp < MAX_SPEED) 
             hsp +=acc/2;
         facing = 1;
     }
 }
-
 
 /*
 This if will only set verticle speed when the jump key is pressed, avoiding the problem above.
@@ -104,8 +80,7 @@ else if (!place_meeting(x,y+1,obj_wall) && doublejump && !((place_meeting(x+1,y,
     }
 }
 
-
- //wall jump script
+//wall jump script
 if((place_meeting(x+1,y,obj_wall)|| place_meeting(x-1,y,obj_wall)) && (key_jump) ) {
     if(key_jump){
      vsp = -jumpspeed * 1.5; //1.5
@@ -138,8 +113,6 @@ else{
         }
     else sprite_index = spr_player_fall;
 }
-
-
 
 image_xscale = facing;
 scr_playerCollideAndMove();

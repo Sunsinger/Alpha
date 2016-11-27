@@ -1,3 +1,4 @@
+//Item drops from enemies
 var enemyX;
 var enemyY
 var willDrop = 1;

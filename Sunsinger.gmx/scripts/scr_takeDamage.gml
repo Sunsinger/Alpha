@@ -1,3 +1,4 @@
+//Code for player getting hurt and becoming temporarily invulnerable.
 hurt = 0; 
 if(!invulnerable && !spike_hit){
     if(lives > 0){
