@@ -37,6 +37,7 @@ hsp_carry = 0; //Platform movespeed
 vsp = 0; //Vertical speed
 frict = 1; //Rate at which the enemy deccelerates
 attackCounter = 0;
+jumpCounter = 0;
 invincible = false;
 hp = 4; //Minion health
 </string>
@@ -118,14 +119,19 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Variable that determines time between attacks
+            <string>///Minion States
+
+//Variable that determines time between attacks/movements
 attackCounter++;
+jumpCounter++;
 
 
-//Minion States
 switch(state){
+
+    //Idle State
     case minion_states.idle:
     {
+        image_speed = .2;
         move = 0;
         hsp = 0;
         vsp = vsp+grav;
@@ -135,12 +141,15 @@ switch(state){
         break;
     }
     
+    
+    //Chase State
     case minion_states.chase:
     {
-        dir = sign(obj_player.x - x);   //Make enemy face player.
-        move = dir * -1;
-        hsp = dir * movespeed; //Movespeed of enemy
-        vsp = vsp+grav;
+        image_speed = .2;
+        dir = sign(obj_player.x - x);   //Make enemy face minion
+        move = dir * -1;        //Move towards player
+        hsp = dir * movespeed; //Movespeed of minion
+        vsp = vsp+grav;         //Gravity Variable
         
         //Animate
         if (move != 0) 
@@ -151,13 +160,20 @@ switch(state){
         }
         
         //Minion decides what to do based on distance from player
-        if(distance_to_object(obj_player) &lt; 33)
+        
+        if((distance_to_object(obj_player) &lt; 700) &amp;&amp; (place_meeting(x+(20*dir), y, obj_wall)) &amp;&amp; jumpCounter &gt;= 60){
+        vsp = -10;
+        jumpCounter = 0;
+        }
+        
+        if(distance_to_object(obj_player) &lt; 73)
             state = minion_states.attack;
         if(distance_to_object(obj_player) &gt; 700)
             state = minion_states.idle;
         break;
     }
     
+    //Injured State
     case minion_states.damaged:
     { 
      scr_collideAndMove();
@@ -165,31 +181,39 @@ switch(state){
      break;
     }
     
-        case minion_states.death:
-    { 
-    
+    //Death State
+    case minion_states.death:
+    {  
      hsp = 0;
      image_speed = .1;
      sprite_index = spr_minion_death;
      break;
     }
     
-    
+    //Attack State
     case minion_states.attack:
     {        
     
-            hsp = 0;
+    
+        //Stop movement
+        hsp = 0;
         
-        if (attackCounter &gt;= 30){
+        //Checks if minion can attack again
+        if (attackCounter &gt;= 45){
     
         //Start animation
-        sprite_index = spr_minion_atk;
         
+        if(sprite_index != spr_minion_atk){
+        image_speed = .3;
+        sprite_index = spr_minion_atk;
+        image_index = 0;
+        }
         
         //Check damage frames
         if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 3.2){
             audio_play_sound(snd_minionAttack,10,0)
         
+            //Creates attack hitbox
             with(instance_create(x, y, obj_hb_minion_atk)){
                 //Flip based on direction
                 image_xscale = other.image_xscale;
@@ -200,16 +224,12 @@ switch(state){
                     obj_player.hsp = 8* (facing * -1);
                     obj_player.vsp = -3;
                     state = states.take_damage; //Go into damage state
-                    } 
-                    
-                           
+                    }            
                 }    
             }
         }
-        
-
     }
-    }
+}
 
 scr_collideAndMove();
 
