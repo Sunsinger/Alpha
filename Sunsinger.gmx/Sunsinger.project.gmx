@@ -42,8 +42,8 @@
     <sprites name="minion sprite">
       <sprite>sprites\spr_minion_idle</sprite>
       <sprite>sprites\spr_minion_atk</sprite>
-      <sprite>sprites\spr_minion_run</sprite>
       <sprite>sprites\spr_hb_minion_atk</sprite>
+      <sprite>sprites\spr_minion_run</sprite>
       <sprite>sprites\spr_minion_death</sprite>
       <sprite>sprites\spr_minion_injured</sprite>
       <sprite>sprites\spir_minion_idle</sprite>
