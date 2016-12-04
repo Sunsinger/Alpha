@@ -28,6 +28,7 @@ enum minion_states
     idle,
     chase,
     attack,
+    comboAttack,
     damaged,
     death
 }

@@ -37,6 +37,7 @@ hsp_carry = 0; //Platform movespeed
 vsp = 0; //Vertical speed
 frict = 1; //Rate at which the enemy deccelerates
 attackCounter = 0;
+comboChance = random(10);
 jumpCounter = 0;
 invincible = false;
 hp = 4; //Minion health
@@ -135,6 +136,7 @@ switch(state){
         move = 0;
         hsp = 0;
         vsp = vsp+grav;
+        comboChance = random(10);
         sprite_index = spr_minion_idle;
         if(distance_to_object(obj_player) &lt; 600 &amp;&amp; (attackCounter &gt;= 30))
             state = minion_states.chase;
@@ -167,8 +169,14 @@ switch(state){
         jumpCounter = 0;
         }
         
-        else if(distance_to_object(obj_player) &lt; 73)
-            state = minion_states.attack;
+        else if(distance_to_object(obj_player) &lt; 73){
+            //30% chance to combo attack 
+            if(comboChance &gt;= 7)
+                state = minion_states.comboAttack;
+            else 
+                state = minion_states.attack;
+        }
+            
             
         else if(distance_to_object(obj_player) &gt; 700)
             state = minion_states.idle;
@@ -194,45 +202,99 @@ switch(state){
     
     //Attack State
     case minion_states.attack:
-    {        
-    
-    
+    {      
         //Stop movement
         hsp = 0;
         
         //Checks if minion can attack again
-        if (attackCounter &gt;= 65){
+        if (attackCounter &gt;= 45){
     
-        //Start animation
+            //Start animation 
+            if(sprite_index != spr_minion_atk){
+                image_speed = .2;
+                sprite_index = spr_minion_atk;
+                image_index = 0;
+            }
         
-        if(sprite_index != spr_minion_atk){
-        image_speed = .2;
-        sprite_index = spr_minion_atk;
-        image_index = 0;
-        }
+            //Check damage frames
+            if(image_index &gt;= 2.1 &amp;&amp; image_index &lt;= 2.2){
+                audio_play_sound(snd_minionAttack,10,0)
         
-        //Check damage frames
-        if(image_index &gt;= 3 &amp;&amp; image_index &lt;= 3.2){
-            audio_play_sound(snd_minionAttack,10,0)
-        
-            //Creates attack hitbox
-            with(instance_create(x, y, obj_hb_minion_atk)){
-                //Flip based on direction
-                image_xscale = other.image_xscale;
+                //Creates attack hitbox
+                with(instance_create(x, y, obj_hb_minion_atk)){
+                    //Flip based on direction
+                    image_xscale = other.image_xscale;
                 
-                //Collision between enemy and player
-                with(instance_place(x, y, obj_player)){
-                    scr_getInputs(0);
-                    obj_player.hsp = 8* (facing * -1);
-                    obj_player.vsp = -3;
-                    state = states.take_damage; //Go into damage state
-                    }            
+                    //Collision between enemy and player
+                    with(instance_place(x, y, obj_player)){
+                        scr_getInputs(0);
+                        obj_player.hsp = 8* (facing * -1);
+                        obj_player.vsp = -3;
+                        state = states.take_damage; //Go into damage state
+                    }
+                }    
+            }                       
+        }
+    }//End attack state
+    
+    
+    case minion_states.comboAttack:
+    {
+        
+        //Stop movement
+        hsp = 0;
+        
+        //Check attack cooldown
+        if(attackCounter &gt;= 45){
+        
+            //Start animation 
+            if(sprite_index != spr_minion_atk2 &amp;&amp; sprite_index != spr_minion_atk){
+                image_speed = .2;
+                sprite_index = spr_minion_atk2;
+                image_index = 0;
+            }
+            
+            //Check damage frames
+            if(image_index &gt;= 2.1 &amp;&amp; image_index &lt;= 2.2){
+                audio_play_sound(snd_minionAttack,10,0)
+            
+                //Creates attack hitbox
+                with(instance_create(x, y, obj_hb_minion_atk)){
+                    //Flip based on direction
+                    image_xscale = other.image_xscale;
+                    
+                    //Collision between enemy and player
+                    with(instance_place(x, y, obj_player)){
+                        scr_getInputs(0);
+                        obj_player.hsp = 8* (facing * -1);
+                        obj_player.vsp = -3;
+                        state = states.take_damage; //Go into damage state
+                    }
                 }    
             }
+            
+            
+            //Check damage frames of second attack
+            if(image_index &gt;= 5.1 &amp;&amp; image_index &lt;= 5.2){
+                audio_play_sound(snd_minionAttack,10,0)
+            
+                //Creates attack hitbox
+                with(instance_create(x, y, obj_hb_minion_atk2)){
+                    //Flip based on direction
+                    image_xscale = other.image_xscale;
+                    
+                    //Collision between enemy and player
+                    with(instance_place(x, y, obj_player)){
+                        scr_getInputs(0);
+                        obj_player.hsp = 8* (facing * -1);
+                        obj_player.vsp = -3;
+                        state = states.take_damage; //Go into damage state
+                    }
+                }    
+            }    
         }
-    }
+    }//End Combo Attack state
 }
-
 scr_collideAndMove();
 
 </string>
@@ -350,7 +412,11 @@ scr_collideAndMove();
 if(sprite_index == spr_minion_atk){
     attackCounter = 0;
     state = minion_states.idle;
-    }
+}
+if(sprite_index == spr_minion_atk2){
+    attackCounter = 0;
+    state = minion_states.idle;
+}
 </string>
           </argument>
         </arguments>

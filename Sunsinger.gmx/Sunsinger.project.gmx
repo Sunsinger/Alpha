@@ -67,6 +67,8 @@
       <sprite>sprites\spr_minion_injured</sprite>
       <sprite>sprites\spir_minion_idle</sprite>
       <sprite>sprites\spr_minion_axe</sprite>
+      <sprite>sprites\spr_minion_atk2</sprite>
+      <sprite>sprites\spr_hb_minion_atk2</sprite>
     </sprites>
     <sprites name="player sprite">
       <sprite>sprites\spr_player_double_jump</sprite>
@@ -238,10 +240,11 @@
     <object>objects\obj_gameover_menu</object>
     <object>objects\obj_info_menu</object>
     <object>objects\obj_minion_axe</object>
+    <object>objects\obj_hb_minion_atk2</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_cave_1</room>
     <room>rooms\TitleScreen</room>
+    <room>rooms\rm_cave_1</room>
     <room>rooms\rm_outside_2</room>
     <room>rooms\rm_building_3</room>
     <room>rooms\InfoScreen</room>
