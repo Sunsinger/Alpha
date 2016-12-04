@@ -201,12 +201,12 @@ switch(state){
         hsp = 0;
         
         //Checks if minion can attack again
-        if (attackCounter &gt;= 45){
+        if (attackCounter &gt;= 65){
     
         //Start animation
         
         if(sprite_index != spr_minion_atk){
-        image_speed = .3;
+        image_speed = .2;
         sprite_index = spr_minion_atk;
         image_index = 0;
         }
