@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
-    <datafiles number="1" name="images">
+  <datafiles number="2" name="datafiles">
+    <datafiles number="2" name="images">
       <datafile>
         <name>background0.png</name>
         <exists>-1</exists>
@@ -23,8 +23,27 @@
         <filename>background0.png</filename>
       </datafile>
     </datafiles>
+    <datafile>
+      <name>EasyMenu - How to implement it.txt</name>
+      <exists>-1</exists>
+      <size>3830</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>EasyMenu - How to implement it.txt</filename>
+    </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Easy Menu</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_cave</sound>
     <sound>sound\snd_jump</sound>
@@ -79,6 +98,7 @@
       <sprite>sprites\spr_returnMenu</sprite>
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_gotoMain</sprite>
+      <sprite>sprites\spr_button</sprite>
     </sprites>
     <sprites name="map sprite">
       <sprite>sprites\bush</sprite>
@@ -140,12 +160,27 @@
     <script>scripts\scr_takeDamage.gml</script>
     <script>scripts\scr_aerialAttack.gml</script>
     <script>scripts\scr_enemyDrop.gml</script>
+    <scripts name="EasyMenu Scripts">
+      <script>scripts\em_init.gml</script>
+      <script>scripts\em_step.gml</script>
+      <script>scripts\em_add_section.gml</script>
+      <script>scripts\em_draw.gml</script>
+      <script>scripts\em_destroy.gml</script>
+    </scripts>
+    <scripts name="menu scripts">
+      <script>scripts\scr_play_game.gml</script>
+      <script>scripts\scr_info_screen.gml</script>
+      <script>scripts\scr_quit_game.gml</script>
+      <script>scripts\scr_main_menu.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_pause</font>
+    <font>fonts\fnt_button</font>
+    <font>fonts\fnt_controls</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_bird</object>
@@ -197,14 +232,18 @@
     <object>objects\obj_gameoverController</object>
     <object>objects\obj_playerDeath</object>
     <object>objects\obj_pause_controller</object>
+    <object>objects\obj_button</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_gameover_menu</object>
+    <object>objects\obj_info_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
     <room>rooms\rm_cave_1</room>
     <room>rooms\rm_outside_2</room>
     <room>rooms\rm_building_3</room>
-    <room>rooms\game_over</room>
     <room>rooms\InfoScreen</room>
+    <room>rooms\game_over</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>
