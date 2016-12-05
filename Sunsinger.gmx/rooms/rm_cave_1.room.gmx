@@ -30,7 +30,8 @@ enum minion_states
     attack,
     comboAttack,
     damaged,
-    death
+    death,
+    jump
 }
 
 enum slime_states
