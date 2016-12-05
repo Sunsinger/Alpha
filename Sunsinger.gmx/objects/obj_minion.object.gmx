@@ -41,6 +41,7 @@ comboChance = random(10);
 jumpCounter = 0;
 invincible = false;
 hp = 4; //Minion health
+hasAttacked = false;
 </string>
           </argument>
         </arguments>
@@ -137,7 +138,13 @@ switch(state){
         hsp = 0;
         vsp = vsp+grav;
         comboChance = random(10);
+        
+        
         sprite_index = spr_minion_idle;
+        //if(!hasAttacked) sprite_index = spr_minion_idle;
+        //else sprite_index = spr_minion_atk_idle;
+        
+        
         if(distance_to_object(obj_player) &lt; 600 &amp;&amp; (attackCounter &gt;= 30))
             state = minion_states.chase;
         break;
@@ -157,8 +164,10 @@ switch(state){
         if (move != 0) 
             image_xscale = move;
         if (place_meeting(x,y+1, obj_wall)){
-            if (move != 0)
-                sprite_index = spr_minion_run;
+            if (move != 0){
+                if (!hasAttacked) sprite_index = spr_minion_run;
+                else sprite_index = spr_minion_atk_run;
+              }
         }
         
         //Minion decides what to do based on distance from player
@@ -167,6 +176,7 @@ switch(state){
         if((distance_to_object(obj_player) &lt; 700) &amp;&amp; (place_meeting(x+(20*dir), y, obj_wall)) &amp;&amp; (place_meeting(x, y+1, obj_wall)) &amp;&amp; jumpCounter &gt;= 60){
         vsp = -10;
         jumpCounter = 0;
+        state = minion_states.jump;
         }
         
         else if(distance_to_object(obj_player) &lt; 73){
@@ -182,6 +192,18 @@ switch(state){
             state = minion_states.idle;
         break;
     }
+    
+    //Jump State
+       case minion_states.jump:
+    { 
+     scr_collideAndMove();
+     if (vsp &gt; 0) sprite_index = spr_minion_fall;
+     if (vsp &lt; 0) sprite_index = spr_minion_jump;
+     if (place_meeting(x, y+1, obj_wall)) state = minion_states.chase;
+     
+     break;
+    }
+    
     
     //Injured State
     case minion_states.damaged:
@@ -214,6 +236,7 @@ switch(state){
                 image_speed = .2;
                 sprite_index = spr_minion_atk;
                 image_index = 0;
+                hasAttacked = true;
             }
         
             //Check damage frames
