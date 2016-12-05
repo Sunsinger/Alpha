@@ -69,6 +69,10 @@
       <sprite>sprites\spr_minion_axe</sprite>
       <sprite>sprites\spr_minion_atk2</sprite>
       <sprite>sprites\spr_hb_minion_atk2</sprite>
+      <sprite>sprites\spr_minion_atk_run</sprite>
+      <sprite>sprites\spr_minion_atk_idle</sprite>
+      <sprite>sprites\spr_minion_jump</sprite>
+      <sprite>sprites\spr_minion_fall</sprite>
     </sprites>
     <sprites name="player sprite">
       <sprite>sprites\spr_player_double_jump</sprite>
