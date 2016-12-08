@@ -73,6 +73,7 @@
       <sprite>sprites\spr_minion_atk_idle</sprite>
       <sprite>sprites\spr_minion_jump</sprite>
       <sprite>sprites\spr_minion_fall</sprite>
+      <sprite>sprites\spr_minion_throw</sprite>
     </sprites>
     <sprites name="player sprite">
       <sprite>sprites\spr_player_double_jump</sprite>
@@ -190,61 +191,71 @@
     <font>fonts\fnt_controls</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_bird</object>
-    <object>objects\obj_healthBar</object>
-    <object>objects\obj_minion</object>
-    <object>objects\obj_moving_platform_h</object>
-    <object>objects\obj_platform</object>
-    <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_life</object>
-    <object>objects\obj_hb_player_la</object>
-    <object>objects\obj_slime</object>
-    <object>objects\obj_slime_projectile</object>
-    <object>objects\obj_hb_minion_atk</object>
-    <object>objects\obj_info</object>
-    <object>objects\obj_infoScreen</object>
-    <object>objects\obj_quit</object>
-    <object>objects\obj_returnMenu</object>
-    <object>objects\obj_start</object>
-    <object>objects\obj_title</object>
-    <object>objects\obj_title_music</object>
-    <object>objects\obj_restartGame</object>
-    <object>objects\obj_gameOver</object>
-    <object>objects\obj_mainMenu</object>
-    <object>objects\edge_bottom</object>
-    <object>objects\obj_bush</object>
-    <object>objects\obj_cloud</object>
-    <object>objects\obj_door</object>
-    <object>objects\obj_edge_big</object>
-    <object>objects\obj_floor_inside</object>
-    <object>objects\obj_floor_out_sm</object>
-    <object>objects\obj_flower</object>
-    <object>objects\obj_rock</object>
-    <object>objects\obj_web</object>
-    <object>objects\controller</object>
-    <object>objects\obj_home</object>
-    <object>objects\obj_out_big</object>
-    <object>objects\obj_rock_new</object>
-    <object>objects\obj_web_new</object>
-    <object>objects\obj_lever</object>
-    <object>objects\obj_hb_player_aa</object>
-    <object>objects\obj_rock_top</object>
-    <object>objects\obj_bird_fall</object>
-    <object>objects\obj_stand_alone</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_spikes</object>
-    <object>objects\obj_spikes_sideways</object>
-    <object>objects\obj_fireball</object>
-    <object>objects\obj_gameoverController</object>
-    <object>objects\obj_playerDeath</object>
-    <object>objects\obj_pause_controller</object>
-    <object>objects\obj_button</object>
-    <object>objects\obj_menu</object>
-    <object>objects\obj_gameover_menu</object>
-    <object>objects\obj_info_menu</object>
-    <object>objects\obj_minion_axe</object>
-    <object>objects\obj_hb_minion_atk2</object>
+    <objects name="Enemies">
+      <object>objects\obj_hb_minion_atk</object>
+      <object>objects\obj_hb_minion_atk2</object>
+      <object>objects\obj_minion_axe</object>
+      <object>objects\obj_bird</object>
+      <object>objects\obj_minion</object>
+      <object>objects\obj_bird_fall</object>
+      <object>objects\obj_slime</object>
+      <object>objects\obj_slime_projectile</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_playerDeath</object>
+      <object>objects\obj_fireball</object>
+      <object>objects\obj_hb_player_la</object>
+      <object>objects\obj_hb_player_aa</object>
+    </objects>
+    <objects name="Level Assets">
+      <object>objects\obj_fire</object>
+      <object>objects\obj_spikes_sideways</object>
+      <object>objects\obj_spikes</object>
+      <object>objects\obj_lever</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_stand_alone</object>
+      <object>objects\obj_home</object>
+      <object>objects\obj_life</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_cloud</object>
+      <object>objects\obj_web</object>
+      <object>objects\obj_rock_top</object>
+      <object>objects\obj_out_big</object>
+      <object>objects\obj_edge_big</object>
+      <object>objects\edge_bottom</object>
+      <object>objects\obj_flower</object>
+      <object>objects\obj_floor_out_sm</object>
+      <object>objects\obj_rock_new</object>
+      <object>objects\obj_floor_inside</object>
+      <object>objects\obj_door</object>
+      <object>objects\obj_bush</object>
+      <object>objects\obj_web_new</object>
+      <object>objects\obj_moving_platform_h</object>
+    </objects>
+    <objects name="User Interface">
+      <object>objects\obj_info</object>
+      <object>objects\obj_gameover_menu</object>
+      <object>objects\obj_menu</object>
+      <object>objects\obj_button</object>
+      <object>objects\obj_start</object>
+      <object>objects\obj_mainMenu</object>
+      <object>objects\obj_restartGame</object>
+      <object>objects\obj_infoScreen</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_returnMenu</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_healthBar</object>
+      <object>objects\obj_quit</object>
+      <object>objects\obj_gameoverController</object>
+      <object>objects\obj_gameOver</object>
+      <object>objects\obj_pause_controller</object>
+      <object>objects\obj_info_menu</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\controller</object>
+      <object>objects\obj_title_music</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\TitleScreen</room>
