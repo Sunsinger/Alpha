@@ -91,7 +91,7 @@ effect_create_below(ef_spark, random_range(x-10, x+10), random_range(y-7, y+7), 
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_slime">
+    <event eventtype="4" ename="obj_wall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -115,7 +115,7 @@ effect_create_below(ef_spark, random_range(x-10, x+10), random_range(y-7, y+7), 
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="4" ename="obj_slime">
       <action>
         <libid>1</libid>
         <id>603</id>
