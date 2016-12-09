@@ -1053,6 +1053,11 @@
     <instance objName="obj_slime" x="16544" y="832" name="inst_8BF2EC22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_minion" x="12416" y="2112" name="inst_D10D03D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_home" x="16864" y="576" name="inst_35DD3BBD" locked="0" code="" scaleX="4.15714263916016" scaleY="4.04411745071411" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blades" x="8992" y="1600" name="inst_ABE73757" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blades" x="10432" y="1280" name="inst_923B4AE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blades" x="13088" y="1888" name="inst_153CBDE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blades" x="13152" y="992" name="inst_01C64D82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_blades" x="15168" y="1248" name="inst_55FBD845" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

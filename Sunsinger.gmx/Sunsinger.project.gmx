@@ -131,6 +131,7 @@
       <sprite>sprites\spr_fl_inside</sprite>
       <sprite>sprites\cloud</sprite>
       <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_blade</sprite>
     </sprites>
     <sprites name="health sprite">
       <sprite>sprites\spr_healthblockPlayer</sprite>
@@ -232,6 +233,7 @@
       <object>objects\obj_bush</object>
       <object>objects\obj_web_new</object>
       <object>objects\obj_moving_platform_h</object>
+      <object>objects\obj_blades</object>
     </objects>
     <objects name="User Interface">
       <object>objects\obj_info</object>
