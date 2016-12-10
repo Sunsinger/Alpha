@@ -157,7 +157,7 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_bird_patrol_2_1</path>
-    <path>paths\pth_bird_patrol_2_2</path>
+    <path>paths\pth_blades</path>
     <path>paths\pth_bird_patrol_2_3</path>
   </paths>
   <scripts name="scripts">
