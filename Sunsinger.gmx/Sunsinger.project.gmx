@@ -254,6 +254,7 @@
       <object>objects\obj_gameOver</object>
       <object>objects\obj_pause_controller</object>
       <object>objects\obj_info_menu</object>
+      <object>objects\obj_winroom_menu</object>
     </objects>
     <objects name="Misc">
       <object>objects\controller</object>
@@ -267,6 +268,7 @@
     <room>rooms\rm_building_3</room>
     <room>rooms\InfoScreen</room>
     <room>rooms\game_over</room>
+    <room>rooms\winroom</room>
   </rooms>
   <constants number="1">
     <constant name="maxLives">5</constant>

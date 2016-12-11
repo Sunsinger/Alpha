@@ -53,7 +53,11 @@
           <argument>
             <kind>1</kind>
             <string>if(global.door == 1){
+    if(room == rm_building_3){
+    room_goto(winroom);
+    }else{
     room_goto_next();
+    }
 }
 </string>
           </argument>
