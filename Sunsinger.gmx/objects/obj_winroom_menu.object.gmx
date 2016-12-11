@@ -149,8 +149,7 @@ em_draw();
 draw_set_halign(fa_middle);
 draw_set_font(fnt_button);
 draw_set_color(c_black);
-draw_text(room_width/2,(room_height/2)-200,"Thanks for playing our demo!");
-draw_sprite(spr_player_aa,1,room_width/2,(room_height/2)-60);
+draw_text(room_width/2,(room_height/2)-100,"Thanks for viewing our demo!");
 
 </string>
           </argument>
