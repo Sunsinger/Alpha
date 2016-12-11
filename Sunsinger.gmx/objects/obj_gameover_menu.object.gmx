@@ -44,7 +44,7 @@ em_init(
     2,
     0
 );
-em_add_section("Restart Game",scr_play_game);
+em_add_section("Restart Game",scr_replay);
 em_add_section("Main Menu",scr_main_menu);
 em_add_section("Quit",scr_quit_game);
 

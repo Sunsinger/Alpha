@@ -181,6 +181,7 @@
       <script>scripts\scr_info_screen.gml</script>
       <script>scripts\scr_quit_game.gml</script>
       <script>scripts\scr_main_menu.gml</script>
+      <script>scripts\scr_replay.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">

@@ -206,7 +206,9 @@ case states.take_damage: scr_takeDamage(); break;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(lives == 0){
+            <string>globalvar currentroom;
+currentroom = room;
+if(lives == 0){
 room_goto(game_over);
 }
 
